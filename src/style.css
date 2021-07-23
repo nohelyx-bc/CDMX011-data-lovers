@@ -1,3 +1,11 @@
-:root {
-    background-color: aquamarine;
+
+*{
+    background-color: black;
+    color:aquamarine;
+
+}
+#caja{
+    height: 5rem;
+    width: 8rem;
+    border: solid darkblue;
 }
