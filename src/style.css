@@ -1,3 +1,9 @@
 *{
-    color: red;
+    background-color: black;
+    color: cornflowerblue;
+}
+#caja{
+    height: 5rem;
+    width: 8rem;
+    border: solid darkblue;
 }
