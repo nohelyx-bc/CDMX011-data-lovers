@@ -1,8 +1,9 @@
 //import { example } from './data.js';
 // import data from './data/lol/lol.js';
+
 import ghibli from './data/ghibli/ghibli.js';
 console.log(ghibli);
-// import data from './data/rickandmorty/rickandmorty.js';
+
 let movieOne = document.getElementById("caja");
 movieOne.innerText;
 
