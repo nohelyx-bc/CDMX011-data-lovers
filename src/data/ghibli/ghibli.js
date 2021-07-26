@@ -2,7 +2,7 @@ const ghibli = {
   "studio": "Studio Ghibli Inc.",
   "films": [
     {
-      "id": "movieOne",
+      "id": "castleSky",
       "title": "Castle in the Sky",
       "description": "The orphan Sheeta inherited a mysterious crystal that links her to the mythical sky-kingdom of Laputa. With the help of resourceful Pazu and a rollicking band of sky pirates, she makes her way to the ruins of the once-great civilization. Sheeta and Pazu must outwit the evil Muska, who plans to use Laputa's science to make himself ruler of the world.",
       "director": "Hayao Miyazaki",
@@ -12,7 +12,7 @@ const ghibli = {
       "rt_score": "95",
       "people": [
         {
-          "id": "fe93adf2-2f3a-4ec4-9f68-5422f1b87c01",
+          "id": "",
           "name": "Pazu",
           "img": "https://static.wikia.nocookie.net/studio-ghibli/images/8/8b/Pazu.jpg",
           "gender": "Male",
@@ -204,7 +204,7 @@ const ghibli = {
       ]
     },
     {
-      "id": "58611129-2dbc-4a81-a72f-77ddfc1b1b49",
+      "id": "VecinoTotoro",
       "title": "My Neighbor Totoro",
       "description": "Two sisters move to the country with their father in order to be closer to their hospitalized mother, and discover the surrounding trees are inhabited by Totoros, magical spirits of the forest. When the youngest runs away from home, the older sister seeks help from the spirits to find her.",
       "director": "Hayao Miyazaki",
@@ -224,7 +224,7 @@ const ghibli = {
           "specie": "Human"
         },
         {
-          "id": "d5df3c04-f355-4038-833c-83bd3502b6b9",
+          "id": "meiKusakabe",
           "name": "Mei Kusakabe",
           "img": "https://static.wikia.nocookie.net/studio-ghibli/images/b/b5/God_Jul_Mei_%C3%B6nskar_fr%C3%A5n_Tomten.jpg",
           "gender": "Female",
