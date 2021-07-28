@@ -35,7 +35,7 @@ p{
     flex-direction: column;
     border: solid indigo;
     border-radius: 25px;
-    height: 420px;
+    
 }
 .column > * {
     /* flex:  15%;*/
