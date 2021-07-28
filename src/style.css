@@ -2,13 +2,61 @@
 *{
     background-color: black;
     color:aquamarine;
+    padding: 10px;
 
 }
-#caja{
-    height: 5rem;
-    width: 8rem;
-    border: solid darkblue;
+h1{
+    
+    border: dotted paleturquoise;
+    display: flex;
+    justify-content: center;
+    font-family: 'Abril Fatface', cursive;
 }
-.blanco{
+.poster{
     color: white;
+    border: solid violet;
+    border-radius: 3rem;
+}
+.title{
+    color: lightcoral;
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+p{
+    font-family: 'Questrial', sans-serif;
+}
+
+.column{
+    display: flex;  
+    text-align: center; 
+    align-items: center;
+    flex-direction: column;
+    border: solid indigo;
+    border-radius: 25px;
+    
+}
+.column > * {
+    /* flex:  15%;*/
+    flex: 5%;
+    color:white;
+  }
+
+.column img{
+    width: 200px;
+    
+}
+
+.column p{
+  text-align: left;
+  width: 500px;
+}
+
+.column h2{
+    text-align: center;
+}
+
+body{
+    padding: 1em;
 }
