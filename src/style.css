@@ -2,7 +2,7 @@
 *{
     background-color: black;
     color:aquamarine;
-    padding: 10px;
+    
 
 }
 h1{
@@ -16,25 +16,18 @@ p{
     font-family: 'Questrial', sans-serif;
 }
 .all{
-    /*position: relative;
+    position: relative;
     display: flex;
     display: inline-block;
     border: solid indigo;
     border-radius: 25px;
-    width: 325px;
-    height: 1000px;*/
-    position: relative;
-    max-width: 300px;
-    height: 420px;
-    margin: 30px 10px;
-    padding: 20px 15px;
-    display: flex;
-    display: inline-block;
+    max-width: 450px;
+    min-height: 700px;
     
 }
 
 .column{
-    display: flex;  
+    
     text-align: center; 
     align-items: center;
     flex-flow: wrap column;    
@@ -56,9 +49,9 @@ p{
 .column h2{
     text-align: center;
 }
-/*.datos p{
-    display: flex;
+.datos p{
+    margin-left: 3px;
     justify-content: space-between;
-    flex-flow: wrap column;
-    color: red;
-}*/
+    flex-flow: wrap row;
+    color: teal;
+}
