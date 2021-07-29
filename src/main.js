@@ -9,17 +9,23 @@ let personajes = document.getElementById("personajes");
 
 const allFilms = ghibli.films.map((film) => {
     
-    return `<div class="column">
+    return      `<div class="all">
+                <div class="column">
+
                 <h2 class="title">${film.title}</h2> 
-                <img class="row" src="${film.poster}">  
-                <p class="row">${film.description}</p>
-                <p class="row">· Director: ${film.director}</p>     
-                <p>· Productor: ${film.producer}</p> 
-                <p>· Año de estreno: ${film.release_date}</p>
-                <p>· Rotten Tomatoes: ${film.rt_score}</p>
-                <p>· Personajes: ${film.people.map(personaje => {return `${personaje.name}`
+                <img class="" src="${film.poster}">  
+                <p class="">${film.description}</p>
+                
+               <!-- <p>· Personajes: ${film.people.map(personaje => {return `${personaje.name}`
                 }
-                    )}</p>
+                    )}</p> -->
+            </div>
+            <div class="datos"> 
+            <p class="">· Director: ${film.director}</p>    
+            <p>· Productor: ${film.producer}</p> 
+            <p>· Año de estreno: ${film.release_date}</p>
+            <p>· Rotten Tomatoes: ${film.rt_score}</p>
+            </div>
             </div>` 
 }) 
 console.log(allFilms);
