@@ -4,20 +4,21 @@
 import ghibli from './data/ghibli/ghibli.js';
 
 let peliculas = document.getElementById("peliculas")
-//let personajes = document.getElementById("personajes");
+    //let personajes = document.getElementById("personajes");
 
 
-/*const allFilms = */ ghibli.films.forEach((film) => {
-    peliculas.innerHTML +=
-    
-          `<div class="all">
+/*const allFilms = */
+ghibli.films.forEach((film) => {
+            peliculas.innerHTML +=
+
+                `<div class="all">
                 <div class="column">
 
                 <h2 class="title">${film.title}</h2> 
                 <img class="" src="${film.poster}">  
-                 <p class="">${film.description}</p>
-                 <!-- 
-               <p>· Personajes: ${film.people.map(personaje => {return `${personaje.name}`
+                <p class="">${film.description}</p>
+                <!-- 
+            <p>· Personajes: ${film.people.map(personaje => {return `${personaje.name}`
                 }
                     )}</p> -->
             </div>
