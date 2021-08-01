@@ -9,22 +9,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Questrial&display=swap" rel="stylesheet">
-  </head>
+</head>
 
 
 </head>
 
 <body>
+    <header>
+        <label for="categoria">
+            Categoría
+        </label>
+        <select name="categoria">
+            <option disabled="">Selecciona una opción</option>
+            <option value="Popularidad">Popularidad</option>
+            <option value="Director">Director</option>
+            <option value="Productor">Productor</option>
+        </select>
+    </header>
 
     <h1>Studio Ghibli</h1>
-    <div id="personajes"></div>
-    <div class="allPeliculas" id="peliculas"></div>
+
 
     <section>
-        <p>Aquí se verían las películas</p>
+        <div id="personajes"></div>
+        <div class="allPeliculas" id="peliculas"></div>
     </section>
-    
-  <script src="main.js" type="module"></script>
+
+    <script src="main.js" type="module"></script>
 </body>
 
 </html>
