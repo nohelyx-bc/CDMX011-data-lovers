@@ -1,57 +1,76 @@
+/* *{} */
 
-*{
-    background-color: black;
-    color:aquamarine;
-    
-
+body {
+    margin: 3rem;
+    background-color: #cff09e;
 }
-h1{
-    border: dotted paleturquoise;
+
+h1 {
+    border: dotted #79bd9a;
     display: flex;
     justify-content: center;
     font-family: 'Abril Fatface', cursive;
+    color: #79bd9a;
+    font-size: 48px;
 }
 
-p{
+p {
     font-family: 'Questrial', sans-serif;
 }
-.all{
+
+ul {
+    font-family: 'Questrial', sans-serif;
+}
+
+.card {
     position: relative;
     display: flex;
     display: inline-block;
-    border: solid indigo;
     border-radius: 25px;
     max-width: 450px;
     min-height: 700px;
-    
+    padding: 1rem;
+    margin: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.65);
 }
 
-.column{
-    
-    text-align: center; 
-    align-items: center;
-    flex-flow: wrap column;    
-}
-.column > * {  
-    color:white;
-  }
-
-.column img{
-    width: 200px;
-    
-}
-
-.column p{
-  text-align: left;
-
-}
-
-.column h2{
+.column {
     text-align: center;
+    align-items: center;
+    flex-flow: wrap column;
 }
-.datos p{
+
+.column>* {
+    color: white;
+}
+
+.column img {
+    width: 200px;
+}
+
+.column p {
+    text-align: left;
+    color: black;
+}
+
+.column h2 {
+    text-align: center;
+    color: #3b8686;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.datos p {
     margin-left: 3px;
     justify-content: space-between;
     flex-flow: wrap row;
     color: teal;
+}
+
+#peliculas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-image: url('assets/chu.jpg');
+    background-repeat: repeat;
 }
