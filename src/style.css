@@ -34,7 +34,9 @@ ul {
     padding: 1rem;
     margin: 1.5rem;
     background-color: rgba(255, 255, 255, 0.65);
-    align-content: center;
+    text-align: center;
+    box-shadow: inset 0 0 1000px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.5px);
 }
 
 .column {
@@ -51,6 +53,10 @@ ul {
 .column p {
     text-align: left;
     color: black;
+}
+
+.column ul {
+    text-align: center;
 }
 
 .column h2 {
