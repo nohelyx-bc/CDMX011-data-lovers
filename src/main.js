@@ -11,22 +11,24 @@ let peliculas = document.getElementById("peliculas")
 ghibli.films.forEach((film) => {
             peliculas.innerHTML +=
 
-                `<div class="all">
+                `<div class="card">
                 <div class="column">
 
-                <h2 class="title">${film.title}</h2> 
-                <img class="" src="${film.poster}">  
-                <p class="">${film.description}</p>
+                <h2>${film.title}</h2> 
+                <img src="${film.poster}">  
+                <p>${film.description}</p>
                 <!-- 
             <p>· Personajes: ${film.people.map(personaje => {return `${personaje.name}`
                 }
                     )}</p> -->
             </div>
-            <div class="datos"> 
-            <p class="">· Director: ${film.director}</p>    
-            <p>· Productor: ${film.producer}</p> 
-            <p>· Año de estreno: ${film.release_date}</p>
-            <p>· Rotten Tomatoes: ${film.rt_score}</p>
+            <div> 
+            <ul>
+            <li type="circle">Director: ${film.director}</li>    
+            <li type="circle">Productor: ${film.producer}</li> 
+            <li type="circle">Año de estreno: ${film.release_date}</li>
+            <li type="circle">Rotten Tomatoes: ${film.rt_score}</li>
+            </ul>
             </div>
             </div>` 
 }) 
