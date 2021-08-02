@@ -16,10 +16,12 @@ h1 {
 
 p {
     font-family: 'Questrial', sans-serif;
+    padding: 1rem;
 }
 
 ul {
     font-family: 'Questrial', sans-serif;
+    padding: 0.5rem;
 }
 
 .card {
@@ -28,20 +30,20 @@ ul {
     display: inline-block;
     border-radius: 25px;
     max-width: 450px;
-    min-height: 700px;
+    min-height: 750px;
     padding: 1rem;
     margin: 1.5rem;
     background-color: rgba(255, 255, 255, 0.65);
+    text-align: center;
+    box-shadow: inset 0 0 1000px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.5px);
 }
 
 .column {
+    justify-content: center;
     text-align: center;
     align-items: center;
     flex-flow: wrap column;
-}
-
-.column>* {
-    color: white;
 }
 
 .column img {
@@ -51,6 +53,10 @@ ul {
 .column p {
     text-align: left;
     color: black;
+}
+
+.column ul {
+    text-align: center;
 }
 
 .column h2 {
