@@ -31,19 +31,52 @@ ghibli.films.forEach((film) => {
             </ul>
             </div>
             </div>` 
-}) 
-//console.log(allFilms);
+});
 
 
+const hayaoMiyazaki = ghibli.films.filter((dir) =>{
+    if(dir.director === "Hayao Miyazaki"){
+        return dir;
+    }
+});
 
-/* const pers = ghibli.films.map(film) =>{
-    return `${film.people.map(personaje => {return `${personaje.name}`
-}
-personajes.innerHTML =pers;*/
+const isaoTakahata = ghibli.films.filter((dir) =>{
+    if(dir.director === "Isao Takahata"){
+        return dir;
+    }
+});
 
-console.log(ghibli.films);
-//showMovie(films);
-//console.log(showMovie);
-//console.log(Array.isArray(films));
+const hiromasaYonebayashi = ghibli.films.filter((dir) =>{
+    if(dir.director === "Hiromasa Yonebayashi"){
+        return dir;
+    }
+});
+
+const goroMiyazaki = ghibli.films.filter((dir) =>{
+    if(dir.director === "Gorō Miyazaki"){
+        return dir;
+    }
+});
+
+const hiroyukiMorita = ghibli.films.filter((dir) =>{
+    if(dir.director === "Hiroyuki Morita"){
+        return dir;
+    }
+});
+
+const yoshifumiKondo = ghibli.films.filter((dir) =>{
+    if(dir.director === "Yoshifumi Kondō"){
+        return dir;
+    }
+});
+
+console.log(hayaoMiyazaki);
+console.log(isaoTakahata);
+console.log(hiromasaYonebayashi);
+console.log(goroMiyazaki);
+console.log(hiroyukiMorita);
+console.log(yoshifumiKondo);
+
+//Hiroyuki Morita
 
 //console.log(example, data);
