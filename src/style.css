@@ -25,6 +25,15 @@ p {
     color: black;
 }
 
+#movies {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-image: url('assets/chu.jpg');
+    background-repeat: repeat;
+}
+
 .card {
     position: relative;
     display: flex;
@@ -67,15 +76,6 @@ p {
     justify-content: space-between;
     flex-flow: wrap row;
     color: teal;
-}
-
-#peliculas {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    background-image: url('assets/chu.jpg');
-    background-repeat: repeat;
 }
 
 nav {

@@ -4,12 +4,13 @@ import { allFilms } from './data.js';
 import ghibli from './data/ghibli/ghibli.js';
 
 let allInfo = new allFilms;
-let peliculas = document.getElementById("peliculas")
+let movies = document.getElementById("movies")
 let rt = document.getElementById("rt");
+let alphabet = document.getElementById("alphabet").value;
 //let personajes = document.getElementById("personajes");
 
 ghibli.films.forEach((film) => {
-            peliculas.innerHTML +=
+            movies.innerHTML +=
 
                 `<div class="card">
 <div class="column">
@@ -32,3 +33,9 @@ ghibli.films.forEach((film) => {
 </div>
 </div>` 
 });
+
+/*
+document.getElementById("alphabet").addEventListener("click", (event) => {
+    let filmsOrder = moviesSortBy(ghibli.films, alphabet.value);
+    let filmsHTML = "";
+}) */
