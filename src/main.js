@@ -4,6 +4,7 @@
 import ghibli from './data/ghibli/ghibli.js';
 
 let peliculas = document.getElementById("peliculas")
+let rt = document.getElementById("rt");
     //let personajes = document.getElementById("personajes");
 
 
@@ -69,14 +70,24 @@ const yoshifumiKondo = ghibli.films.filter((dir) =>{
         return dir;
     }
 });
+//Prueba para popularidad
 
+const popularity = ghibli.films.filter((pop) =>{
+    if(pop.rt_score >= 95){
+        
+        return pop;
+    }
+    
+});
+    // En la línea 84 intenté mostrarlo en el DOM, pero me salen como "objetos". 
+    //Puedes descomentarlo para ver cómo sale. Jeje.
+   // rt.innerHTML = popularity.sort((a) => (95 > a.rt_score) ? 1 : -1);
 console.log(hayaoMiyazaki);
 console.log(isaoTakahata);
 console.log(hiromasaYonebayashi);
 console.log(goroMiyazaki);
 console.log(hiroyukiMorita);
 console.log(yoshifumiKondo);
-
-//Hiroyuki Morita
+console.log(popularity.sort((a) => (95 > a.rt_score) ? 1 : -1));
 
 //console.log(example, data);

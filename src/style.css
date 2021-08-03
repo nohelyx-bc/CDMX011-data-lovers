@@ -19,11 +19,6 @@ p {
     padding: 1rem;
 }
 
-ul {
-    font-family: 'Questrial', sans-serif;
-    padding: 0.5rem;
-}
-
 .card {
     position: relative;
     display: flex;
@@ -57,6 +52,8 @@ ul {
 
 .column ul {
     text-align: center;
+    list-style: none;
+    
 }
 
 .column h2 {
@@ -80,3 +77,38 @@ ul {
     background-image: url('assets/chu.jpg');
     background-repeat: repeat;
 }
+
+nav{
+    display: flex;
+    justify-content: center;
+}
+  ul{
+    list-style: none;
+  }
+  nav{
+      display: flex;
+
+  }
+  .nav li>a{
+    background-color: #79bd9a;
+    border-radius: 3rem;
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    min-width: 150px;
+  }
+  .nav li>a:hover{
+    color: #000;
+    background-color: #eaeaea;
+  }
+  .nav>li{
+    float: left;
+    text-align:center
+  }
+  .nav>li>ul{
+    display: none;
+  }
+  .nav>li:hover>ul {
+    display:block;
+  }

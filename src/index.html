@@ -5,37 +5,72 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Questrial&display=swap" rel="stylesheet">
 </head>
 
-
-</head>
-
 <body>
     <header>
-        <label for="categoria">
-            Categoría
-        </label>
-        <select name="categoria">
-            <option disabled="">Selecciona una opción</option>
-            <option value="Popularidad">Popularidad</option>
-            <option value="Director">Hayao Miyazaki</option>
-            <option value="Director">Isao Takahata</option>
-            <option value="Director">Hiromasa Yonebayashi</option>
-            <option value="Director">Gorō Miyazaki</option>
-            <option value="Director">Hiroyuki Morita</option>
-            <option value="Productor">Productor</option>
-        </select>
+        <!-- Cambié todo lo del header, aunque se mueve toda la página al desplegarse. :( 
+            Pero bueno, me dices si te gusta cómo se ve, si no al rato le movemos -->
+        <nav>
+            <ul class="nav">
+                <li><a>Películas
+                    <ul>
+                        <li><a>Año de estreno</a></li>
+                        <li><a>Calificación RT</a></li>
+                        <li><a>Datos curiosos</a></li>
+                    </ul>
+                </a></li>
+                <li><a>Personajes
+                    <ul>
+                        <li><a>Castle In the Sky</a></li>
+                        <li><a>My Neighbor Totoro</a></li>
+                        <li><a>Kiki's Delivery Service</a></li>
+                        <li><a>Grave of the Fireflies</a></li>
+                        <li><a>Only Yesterday</a></li>
+                        <li><a>Porco Rosso</a></li>
+                    </ul>
+                </a></li>
+                <li><a>Locaciones
+                    <ul>
+                        <li><a>Castle In the Sky</a></li>
+                        <li><a>My Neighbor Totoro</a></li>
+                        <li><a>Kiki's Delivery Service</a></li>
+                        <li><a>Grave of the Fireflies</a></li>
+                        <li><a>Only Yesterday</a></li>
+                        <li><a>Porco Rosso</a></li>
+                    </ul>
+                </a></li>
+                <li><a>Vehículos
+                    <ul>
+                        <li><a>Castle In the Sky</a></li>
+                        <li><a>My Neighbor Totoro</a></li>
+                        <li><a>Kiki's Delivery Service</a></li>
+                        <li><a>Grave of the Fireflies</a></li>
+                        <li><a>Only Yesterday</a></li>
+                        <li><a>Porco Rosso</a></li>
+                    </ul>
+                </a></li>
+                <li><a>Directores
+                    <ul>
+                        <li><a>Hayao Miyazaki</a></li>
+                        <li><a>Isao Takahata</a></li>
+                        <li><a>Hiromasa Yonebayashi</a></li>
+                        <li><a>Gorō Miyazaki</a></li>
+                        <li><a>Hiroyuki Morita</a></li>
+                        <li><a>Yoshifumi Kondō</a></li>
+                    </ul>
+                </a></li>
+            </ul>
+        </nav>
     </header>
 
     <h1>Studio Ghibli</h1>
 
-
     <section>
-        <div id="personajes"></div>
+        <div id="rt"></div>
         <div id="peliculas"></div>
     </section>
 
