@@ -8,75 +8,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <!-- Cambié todo lo del header, aunque se mueve toda la página al desplegarse. :( 
-            Pero bueno, me dices si te gusta cómo se ve, si no al rato le movemos -->
-        <nav>
-            <ul class="nav">
-                <li><a>Películas
-                    <ul>
-                        <li id="year"><a>Año de estreno</a></li>
-                <li><a id="alphabet" value="alphabet">Alfabéticamente</a></li>
-                <li id="rt"><a>Calificación RT</a></li>
-                <li><a>Datos curiosos</a></li>
-            </ul>
-            </a>
-            </li>
-            <li id="characters"><a>Personajes
-                    <ul>
-                        <li><a>Castle In the Sky</a></li>
-            <li><a>My Neighbor Totoro</a></li>
-            <li><a>Kiki's Delivery Service</a></li>
-            <li><a>Grave of the Fireflies</a></li>
-            <li><a>Only Yesterday</a></li>
-            <li><a>Porco Rosso</a></li>
-            </ul>
-            </a>
-            </li>
-            <li><a>Locaciones
-                    <ul>
-                        <li><a>Castle In the Sky</a></li>
-            <li><a>My Neighbor Totoro</a></li>
-            <li><a>Kiki's Delivery Service</a></li>
-            <li><a>Grave of the Fireflies</a></li>
-            <li><a>Only Yesterday</a></li>
-            <li><a>Porco Rosso</a></li>
-            </ul>
-            </a>
-            </li>
-            <li><a>Vehículos
-                    <ul>
-                        <li><a>Castle In the Sky</a></li>
-            <li><a>My Neighbor Totoro</a></li>
-            <li><a>Kiki's Delivery Service</a></li>
-            <li><a>Grave of the Fireflies</a></li>
-            <li><a>Only Yesterday</a></li>
-            <li><a>Porco Rosso</a></li>
-            </ul>
-            </a>
-            </li>
-            <li><a>Directores
-                    <ul>
-                        <li><a>Hayao Miyazaki</a></li>
-            <li><a>Isao Takahata</a></li>
-            <li><a>Hiromasa Yonebayashi</a></li>
-            <li><a>Gorō Miyazaki</a></li>
-            <li><a>Hiroyuki Morita</a></li>
-            <li><a>Yoshifumi Kondō</a></li>
-            </ul>
-            </a>
-            </li>
+        <h1>Studio Ghibli</h1>
+        <span class="nav-bar" id="btnMenu"><i class="fas fa-bars"></i>Menú</span>
+        <nav >
+            <ul class="menu" id="menu">
+                <li class="menu__item"><a href="" class="menu__link">Películas</a></li>
+                <li class="menu__item"><a href="" class="menu__link">Directores</a></li>
+                <li class="menu__item container-submenu">
+                    <a href="#" class="menu__link submenu-btn">Vehículos <i class="fas fa-sort-down"></i></a>
+                    <ul class="submenu">
+                        <li class="menu__item"><a href="" class="menu__link">Castle in the Sky</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">My Neighbor Totoro</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Kiki's Delivery Service</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Grave of the Fireflies</a></li>
+                    </ul>
+                </li>
+                <li class="menu__item"><a href="" class="menu__link">Personajes</a></li>
             </ul>
         </nav>
     </header>
 
-    <h1>Studio Ghibli</h1>
-
     <section>
-        <div id="rt"></div>
+        <!-- <div id="rt"></div> -->
         <div id="movies"></div>
     </section>
 
