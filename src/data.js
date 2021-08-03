@@ -1,13 +1,20 @@
-// estas funciones son de ejemplo
-
-/*export const example = () => {
-  return 'example';
-};
-*/
 import ghibli from './data/ghibli/ghibli.js';
+
+
+
+
+//Objeto que contendrá todas las funciones de vistas para las tarjetas
 export function allFilms() {
 
-    //const allFilms = 
+    //función de ordenamiento
+    const moviesSortBy = (films, movies) => {
+        if (movies == "alphabet") {
+            const sortByAlphabet = ghibli.films.sort((film1, film2) => {
+                return (film1.title < film2.title);
+            })
+        }
+    }
+
 
     const hayaoMiyazaki = ghibli.films.filter((dir) => {
         if (dir.director === "Hayao Miyazaki") {
