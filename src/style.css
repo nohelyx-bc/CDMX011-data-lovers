@@ -5,6 +5,10 @@ body {
     background-color: #cff09e;
 }
 
+header {
+    z-index: 10;
+}
+
 h1 {
     border: dotted #79bd9a;
     display: flex;
@@ -17,6 +21,8 @@ h1 {
 p {
     font-family: 'Questrial', sans-serif;
     padding: 1rem;
+    text-align: left;
+    color: black;
 }
 
 .card {
@@ -45,15 +51,9 @@ p {
     width: 200px;
 }
 
-.column p {
-    text-align: left;
-    color: black;
-}
-
 .column ul {
     text-align: center;
     list-style: none;
-    
 }
 
 .column h2 {
@@ -78,18 +78,16 @@ p {
     background-repeat: repeat;
 }
 
-nav{
+nav {
     display: flex;
     justify-content: center;
 }
-  ul{
-    list-style: none;
-  }
-  nav{
-      display: flex;
 
-  }
-  .nav li>a{
+ul {
+    list-style: none;
+}
+
+.nav li>a {
     background-color: #79bd9a;
     border-radius: 3rem;
     color: white;
@@ -97,18 +95,22 @@ nav{
     display: block;
     text-decoration: none;
     min-width: 150px;
-  }
-  .nav li>a:hover{
+}
+
+.nav li>a:hover {
     color: #000;
     background-color: #eaeaea;
-  }
-  .nav>li{
+}
+
+.nav>li {
     float: left;
-    text-align:center
-  }
-  .nav>li>ul{
+    text-align: center
+}
+
+.nav>li>ul {
     display: none;
-  }
-  .nav>li:hover>ul {
-    display:block;
-  }
+}
+
+.nav>li:hover>ul {
+    display: block;
+}
