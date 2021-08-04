@@ -1,16 +1,22 @@
-*{
-  box-sizing: border-box;
+* {
+    box-sizing: border-box;
 }
+
 body {
     margin: 0;
     background-color: rgb(153, 142, 202);
     font-family: 'Quicksand', sans-serif;
-  font-weight: 300;
+    font-weight: 300;
 }
- 
- h1, h2, h3, h4, h5, h6 {
-  font-weight: 500;
- }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+}
 
 h1 {
     margin: 0;
@@ -21,10 +27,15 @@ h1 {
     color: white;
     font-size: 48px;
 }
-h2{
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
+
+svg {
+    height: 150px;
+}
+
+h2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 p {
@@ -35,15 +46,20 @@ p {
     display: flex;
     justify-content: center;
 }
- .description{
-  display: none;
-}/*
+
+.description {
+    display: none;
+}
+
+
+/*
 .description:hover{
   display: block;
 }
 .poster:hover{
 display: none;
 } */
+
 #movies {
     display: flex;
     flex-wrap: wrap;
@@ -64,11 +80,8 @@ display: none;
     min-height: 40rem;
     padding: 1rem;
     margin: 2rem;
-    
-    background-color:rgb(153, 142, 202);
+    background-color: rgb(153, 142, 202);
     text-align: center;
-    
-    
 }
 
 .column {
@@ -82,6 +95,7 @@ display: none;
     width: 200px;
 }
 
+
 /* .column ul {
     text-align: center;
     list-style: none;
@@ -90,7 +104,6 @@ display: none;
 .column h2 {
     text-align: center;
     color: white;
-    
 }
 
 .datos p {
@@ -100,86 +113,87 @@ display: none;
     color: teal;
 }
 
-.nav-bar{
-  background: orange;
-  padding: 20px;
-  display: block;
-  color: white;
-  cursor: pointer;
-  font-size: 1.5em;
-  width: 100%;
+.nav-bar {
+    background: orange;
+    padding: 20px;
+    display: block;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5em;
+    width: 100%;
 }
 
-.menu, .submenu{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  
+.menu,
+.submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
-.menu{
-  background: cornflowerblue;
-  width: 100%;
-  margin-left: -100%;
-  transition: all 0.5s; 
-  
+
+.menu {
+    background: cornflowerblue;
+    width: 100%;
+    margin-left: -100%;
+    transition: all 0.5s;
 }
-.menu__link{
-  display: block;
-  padding: 20px;
-  color: ivory;
-  font-size: 1em;
-  text-decoration: none;
-  width: 9em;
+
+.menu__link {
+    display: block;
+    padding: 20px;
+    color: ivory;
+    font-size: 1em;
+    text-decoration: none;
+    width: 9em;
 }
-.submenu .menu__link:hover{
-  background-color:#3b8686;
-  color: #cff09e;
-  
+
+.submenu .menu__link:hover {
+    background-color: #3b8686;
+    color: #cff09e;
 }
-.menu__link:hover{
-  background-color:#478585;
+
+.menu__link:hover {
+    background-color: #478585;
 }
-.submenu{
-  height: 0;
-  overflow: hidden;
-  transition: all 0.3s;
-  
+
+.submenu {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
 }
-.submenu .menu__link{
-  background:  rgb(129, 167, 236);
-  padding-left: 20px;
-  font-size: 16px;
-  
+
+.submenu .menu__link {
+    background: rgb(129, 167, 236);
+    padding-left: 20px;
+    font-size: 16px;
 }
+
 .mostrar {
-  margin-left: 0;
+    margin-left: 0;
 }
 
-@media(min-width:1024px){
-  .nav-bar{
-      display: none;
-  }
-  .menu{
-      margin-left: 0;
-      display: flex;
-  }
-  
-  .container-submenu{
-      position: relative;
-  }
-  .submenu{
-      position: absolute;
-      top: 62px;
-      width: 180px; 
-      overflow: visible;
-      z-index: 1000;
-      opacity: 0;
-      visibility: hidden;
-      font-size: 15px;
-  }
-  .container-submenu:hover .submenu {
-      opacity: 1;
-      visibility: visible;
-    
-  }
+@media(min-width:1024px) {
+    .nav-bar {
+        display: none;
+    }
+    .menu {
+        margin-left: 0;
+        display: flex;
+    }
+    .container-submenu {
+        position: relative;
+    }
+    .submenu {
+        position: absolute;
+        top: 62px;
+        width: 180px;
+        overflow: visible;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        font-size: 15px;
+    }
+    .container-submenu:hover .submenu {
+        opacity: 1;
+        visibility: visible;
+    }
 }
