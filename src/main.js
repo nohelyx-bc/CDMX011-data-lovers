@@ -5,9 +5,9 @@ import ghibli from './data/ghibli/ghibli.js';
 console.log(allFilms);
 //let allInfo = new allFilms;
 let movies = document.getElementById("movies")
-//let rt = document.getElementById("rt");
-//let alphabet = document.getElementById("alphabet").value;
-//let personajes = document.getElementById("personajes");
+    //let rt = document.getElementById("rt");
+    //let alphabet = document.getElementById("alphabet").value;
+    //let personajes = document.getElementById("personajes");
 
 
 ghibli.films.forEach((film) => {
@@ -24,11 +24,11 @@ ghibli.films.forEach((film) => {
 }
 )}</p> -->
 </div>
-<div> 
-<p type="circle">Director: ${film.director}</p>    
-<p type="circle">Productor: ${film.producer}</p> 
-<p type="circle">Año de estreno: ${film.release_date}</p>
-<p type="circle">Rotten Tomatoes: ${film.rt_score}</p>
+<div class="datos"> 
+<p>Director: ${film.director}</p>    
+<p>Productor: ${film.producer}</p> 
+<p>Año de estreno: ${film.release_date}</p>
+<p>Rotten Tomatoes: ${film.rt_score}</p>
 </div>
 </div>` 
 });
