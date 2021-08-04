@@ -7,7 +7,22 @@ import ghibli from './data/ghibli/ghibli.js';
 let movies = document.getElementById("movies")
     //let rt = document.getElementById("rt");
     //let alphabet = document.getElementById("alphabet").value;
-    let perso = document.getElementById("personajes");
+    let goro = document.getElementById("goro");
+    //const goroMiyazaki = 
+    ghibli.films.filter((dir) => {
+        if (dir.director === "Gorō Miyazaki") {
+              goro.innerHTML += dir;
+            //`<p> ${dir}</p>`
+          // goro.innerHTML 
+          
+        }
+    });
+  
+    // goro.addEventListener("click", (goroMiyazaki));
+    // document.getElementById("movie").style.display="none";
+   
+   
+    //
 
 ghibli.films.forEach((film) => {
       movies.innerHTML +=
@@ -52,11 +67,7 @@ const hiromasaYonebayashi = ghibli.films.filter((dir) => {
     }
 });
 
-const goroMiyazaki = ghibli.films.filter((dir) => {
-    if (dir.director === "Gorō Miyazaki") {
-        return dir;
-    }
-});
+
 
 const hiroyukiMorita = ghibli.films.filter((dir) => {
     if (dir.director === "Hiroyuki Morita") {
@@ -103,7 +114,7 @@ const locations = ghibli.films.map((film)=>{
 console.log(hayaoMiyazaki);
 console.log(isaoTakahata);
 console.log(hiromasaYonebayashi);
-console.log(goroMiyazaki);
+//console.log(goroMiyazaki);
 console.log(hiroyukiMorita);
 console.log(yoshifumiKondo);
 console.log(popularity.sort((a) => (95 > a.rt_score) ? 1 : -1)); //Ordena por calificación
