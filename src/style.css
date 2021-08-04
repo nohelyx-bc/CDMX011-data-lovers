@@ -45,7 +45,6 @@ p {
     padding: 2px;
     text-align: left;
     color: white;
-    
     text-align: center;
 }
 
@@ -67,7 +66,7 @@ display: none;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    background-image: url('assets/chu.jpg');
+    background-image: url('assets/fondo.png');
     background-repeat: repeat;
 }
 
@@ -127,11 +126,11 @@ display: none;
     width: 100%;
 }
 
-.menu, .submenu {
+.menu,
+.submenu {
     list-style: none;
     padding: 0;
     margin: 0;
-  
 }
 
 .menu {
@@ -151,28 +150,26 @@ display: none;
     width: 9em;
     border-radius: 2rem;
 }
+
 .submenu {
     height: 0;
     overflow: hidden;
     transition: all 0.3s;
-
-    
 }
+
 .submenu .menu__link {
     background: rgb(129, 167, 236);
     padding: 15px;
     font-size: 14px;
     width: auto;
     text-align: center;
-    
-    
 }
 
 .submenu .menu__link:hover {
     background-color: #3b8686;
     color: #cff09e;
-    
 }
+
 .menu__link:hover {
     background-color: #478585;
 }
