@@ -1,33 +1,28 @@
-//import { example } from './data.js';
-// import data from './data/lol/lol.js';
-// import { allFilms } from './data.js';
+
 import ghibli from './data/ghibli/ghibli.js';
-//console.log(allFilms);
-//let allInfo = new allFilms;
+import {filtradopordirector} from './data.js'
+
 let movies = document.getElementById("movies")
-    //let rt = document.getElementById("rt");
-    //let alphabet = document.getElementById("alphabet").value;
-    let goro = document.getElementById("goro");
-    //const goroMiyazaki = 
-    ghibli.films.filter((dir) => {
-        if (dir.director === "Gorō Miyazaki") {
-              goro.innerHTML += dir;
-            //`<p> ${dir}</p>`
-          // goro.innerHTML 
-          
-        }
-    });
-  
-    // goro.addEventListener("click", (goroMiyazaki));
-    // document.getElementById("movie").style.display="none";
-   
-   
-    //
+let elbenitoselect= document.getElementById("selectito")
 
-ghibli.films.forEach((film) => {
-      movies.innerHTML +=
+iniciar(ghibli)
 
-         `<div class="card">
+elbenitoselect.addEventListener("change",function(e){
+    console.log(filtradopordirector(ghibli,e.target.value))
+    //borrar todo 
+    //iniciar 
+})
+
+function iniciar(data){
+    let html=""
+    data.films.forEach((film) => {
+    html+=generadorcitoDeeHtmlcito(film)      
+  });
+  movies.innerHTML =html
+}
+
+function generadorcitoDeeHtmlcito(film){
+   return `<div class="card">
         <div class="column">
 
         <h2>${film.title}</h2> 
@@ -45,15 +40,9 @@ ghibli.films.forEach((film) => {
         <p>Rotten Tomatoes: ${film.rt_score}</p>
         </div>
         </div>` 
+}
 
-});
 
-
-const hayaoMiyazaki = ghibli.films.filter((dir) => {
-    if (dir.director === "Hayao Miyazaki") {
-        return dir;
-    }
-});
 
 const isaoTakahata = ghibli.films.filter((dir) => {
     if (dir.director === "Isao Takahata") {
@@ -109,7 +98,7 @@ const locations = ghibli.films.map((film)=>{
     return film.locations;
 });
 
-
+/*
 //Filtrado por directores
 console.log(hayaoMiyazaki);
 console.log(isaoTakahata);
