@@ -51,46 +51,66 @@
         <span class="nav-bar" id="btnMenu"><i class="fas fa-bars"></i>Menú</span>
         <nav>
             <ul class="menu" id="menu">
-                <li class="menu__item container-submenu">
+              <!--   <li class="menu__item container-submenu">
                     <a href="#" class="menu__link submenu-btn">Películas <i class="fas fa-sort-down"></i></a>
                     <ul class="submenu">
                         <li class="menu__item"><a href="#" class="menu__link">Año de Lanzamiento</a></li>
                         <li class="menu__item"><a href="#" class="menu__link">Rotten Tomatoes</a></li>
                         <li class="menu__item"><a href="#" class="menu__link">Año de Lanzamiento</a></li>
                     </ul>
-                </li>
-                <select id="selectito">
-                    <option>Alba tarantino</option>
-                    <option>Noeli Torres</option>
-                    <option>Hayao Miyazaki</option>
+                </li> -->
+
+                <select class ="menu__item container-submenu" id="clickMovies"> 
+                    
+                    <div class="submenu"> 
+                        <option >Películas</option>
+                        <option >Año de Lanzamiento</option>
+                        <option value="RT">Rotten Tomatoes</option>
+                        <option >Año de Lanzamiento</option>
+                    </div>
                 </select>
-                <li class="menu__item container-submenu">
-                    <a href="#" class="menu__link submenu-btn">Directores <i class="fas fa-sort-down"></i></a>
-                    <ul class="submenu">
-                        <li class="menu__item"><a href="#" class="menu__link">Hayao Miyazaki</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Isao Takahata</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Hiromasa Yonebayashi</a></li>
-                        <li class="menu__item"><a href="index.html#goro" class="menu__link">Gorō Miyazaki</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Hiroyuki Morita</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Yoshifumi Kondō</a></li>
-                    </ul>
-                </li>
-                <li class="menu__item container-submenu">
-                    <a href="#" class="menu__link submenu-btn">Personajes <i class="fas fa-sort-down"></i></a>
-                    <ul class="submenu">
-                        <li class="menu__item"><a href="#" class="menu__link">Femeninos</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Masculinos</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Otros</a></li>
-                    </ul>
-                </li>
-                <li class="menu__item"><a href="#" class="menu__link">Locaciones</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Vehículos</a></li>
+
+                <select class ="menu__item container-submenu" id="clickDirectors"> 
+                    
+                    <div class="submenu"> 
+                        <option >Directores</option>
+                        <option >Hayao Miyazaki</option>
+                        <option >Isao Takahata</option>
+                        <option >Hiromasa Yonebayashi</option>
+                        <option >Gorō Miyazaki</option>
+                        <option >Hiroyuki Morita</option>
+                        <option >Yoshifumi Kondō</option>
+                    </div>
+                </select>
+
+                <select class ="menu__item container-submenu" id="clickPeople"> 
+                    <div class="submenu"> 
+                        <option >Personajes</option>
+                        <option >Masculino</option>
+                        <option >Femenino</option>
+                        <option >Otros</option>
+                    </div>
+                </select>
+
+                <select class ="menu__item container-submenu" id="clickVehicles"> 
+                    <div class="submenu"> 
+                        <option >Vehículos</option>
+                    </div>
+                </select>
+
+                <select class ="menu__item container-submenu" id="clickLocations"> 
+                    <div class="submenu"> 
+                        <option >Locaciones</option>
+                    </div>
+                </select>
+
+                 <li class="menu__item"><a href="#" class="menu__link">Vehículos</a></li> 
             </ul>
         </nav>
     </header>
 
     <section>
-        <!-- <div id="goro"></div> -->
+        <div id="html2">PRUEBA</div>
         <div id="movies"></div>
     </section>
 
