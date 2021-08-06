@@ -1,28 +1,27 @@
-
 import ghibli from './data/ghibli/ghibli.js';
-import {filtradopordirector} from './data.js'
+import { filtradopordirector } from './data.js'
 
 let movies = document.getElementById("movies")
-let elbenitoselect= document.getElementById("selectito")
+let elbenitoselect = document.getElementById("selectito")
 
 iniciar(ghibli)
 
-elbenitoselect.addEventListener("change",function(e){
-    console.log(filtradopordirector(ghibli,e.target.value))
-    //borrar todo 
-    //iniciar 
+elbenitoselect.addEventListener("change", function(e) {
+    console.log(filtradopordirector(ghibli, e.target.value))
+        //borrar todo 
+        //iniciar 
 })
 
-function iniciar(data){
-    let html=""
+function iniciar(data) {
+    let html = ""
     data.films.forEach((film) => {
-    html+=generadorcitoDeeHtmlcito(film)      
-  });
-  movies.innerHTML =html
+        html += generadorcitoDeeHtmlcito(film)
+    });
+    movies.innerHTML = html
 }
 
-function generadorcitoDeeHtmlcito(film){
-   return `<div class="card">
+function generadorcitoDeeHtmlcito(film) {
+    return `<div class="card">
         <div class="column">
 
         <h2>${film.title}</h2> 
@@ -43,7 +42,7 @@ function generadorcitoDeeHtmlcito(film){
 }
 
 
-
+/*
 const isaoTakahata = ghibli.films.filter((dir) => {
     if (dir.director === "Isao Takahata") {
         return dir;
@@ -96,7 +95,7 @@ const vehicles = ghibli.films.map((film)=>{
 const locations = ghibli.films.map((film)=>{
     if(film.locations !== undefined)
     return film.locations;
-});
+}); */
 
 /*
 //Filtrado por directores
@@ -133,9 +132,4 @@ for (let i = 0; i < subMenuBtn.length; i++){
             }
         }
     });    
-}
-/*
-document.getElementById("alphabet").addEventListener("click", (event) => {
-    let filmsOrder = moviesSortBy(ghibli.films, alphabet.value);
-    let filmsHTML = "";
-}) */
+} */
