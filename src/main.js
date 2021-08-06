@@ -1,16 +1,32 @@
 
 import ghibli from './data/ghibli/ghibli.js';
-import {filtradopordirector} from './data.js'
+import {filtradoPorDirector, filtradoPorPelicula} from './data.js'
 
 let movies = document.getElementById("movies")
-let elbenitoselect= document.getElementById("selectito")
+let clickMovies= document.getElementById("clickMovies");
+let clickDirectors= document.getElementById("clickDirectors");
+let clickPeople= document.getElementById("clickPeople");
+let clickVehicles= document.getElementById("clickVehicles");
+let clickLocations= document.getElementById("clickLocations");
+
 
 iniciar(ghibli)
 
-elbenitoselect.addEventListener("change",function(e){
-    console.log(filtradopordirector(ghibli,e.target.value))
+
+clickDirectors.addEventListener("change",function(e){
+    
+    console.log(filtradoPorDirector(ghibli,e.target.value))
+    generadorcitoDeeHtmlcito();
     //borrar todo 
     //iniciar 
+})
+
+clickMovies.addEventListener("change",function(e){
+    if (e.target.value === "RT"){
+        let sortBy = filtradoPorPelicula(ghibli.films);
+        films.innerHTML = sortBy;
+    }
+    console.log(filtradoPorPelicula(ghibli,e.target.value))
 })
 
 function iniciar(data){
@@ -18,8 +34,15 @@ function iniciar(data){
     data.films.forEach((film) => {
     html+=generadorcitoDeeHtmlcito(film)      
   });
-  movies.innerHTML =html
+  movies.innerHTML =html;
 }
+// function directors(data){
+//     let html2=""
+//     data.films.forEach((filtradoPorDirector) => {
+//     html2+=generadorcitoDeeHtmlcito(filtradoPorDirector)      
+//   });
+//   movies.innerHTML =html2
+// }
 
 function generadorcitoDeeHtmlcito(film){
    return `<div class="card">
@@ -44,31 +67,7 @@ function generadorcitoDeeHtmlcito(film){
 
 
 
-const isaoTakahata = ghibli.films.filter((dir) => {
-    if (dir.director === "Isao Takahata") {
-        return dir;
-    }
-});
 
-const hiromasaYonebayashi = ghibli.films.filter((dir) => {
-    if (dir.director === "Hiromasa Yonebayashi") {
-        return dir;
-    }
-});
-
-
-
-const hiroyukiMorita = ghibli.films.filter((dir) => {
-    if (dir.director === "Hiroyuki Morita") {
-        return dir;
-    }
-});
-
-const yoshifumiKondo = ghibli.films.filter((dir) => {
-    if (dir.director === "Yoshifumi Kondō") {
-        return dir;
-    }
-});
 //Prueba para popularidad
 
 const popularity = ghibli.films.filter((pop) => {
@@ -97,45 +96,3 @@ const locations = ghibli.films.map((film)=>{
     if(film.locations !== undefined)
     return film.locations;
 });
-
-/*
-//Filtrado por directores
-console.log(hayaoMiyazaki);
-console.log(isaoTakahata);
-console.log(hiromasaYonebayashi);
-//console.log(goroMiyazaki);
-console.log(hiroyukiMorita);
-console.log(yoshifumiKondo);
-console.log(popularity.sort((a) => (95 > a.rt_score) ? 1 : -1)); //Ordena por calificación
-console.log(allFilms.sort((a,b)=> (a.title>b.title) ?  1 : -1)); //Ordena alfabéticamente
-console.log(people);
-console.log(vehicles);
-console.log(locations);
-const btnMenu = document.querySelector("#btnMenu");
-const menu = document.querySelector("#menu");
-btnMenu.addEventListener("click",function(){
-    menu.classList.toggle("mostrar");
-});
-
-const subMenuBtn = document.querySelectorAll(".submenu-btn");
-for (let i = 0; i < subMenuBtn.length; i++){
-    subMenuBtn[i].addEventListener("click", function(){
-        if(window.innerWidth < 1024){
-            const subMenu = this.nextElementSibling;
-            const heigh = subMenu.scrollHeight;
-            if (subMenu.classList.contains("desplegar")) {
-                subMenu.classList.remove("desplegar");
-                subMenu.removeAttribute("style");
-
-            }else{
-                subMenu.classList.add("desplegar");
-                subMenu.style.heigh = heigh + "px";
-            }
-        }
-    });    
-}
-/*
-document.getElementById("alphabet").addEventListener("click", (event) => {
-    let filmsOrder = moviesSortBy(ghibli.films, alphabet.value);
-    let filmsHTML = "";
-}) */
