@@ -21,6 +21,7 @@ clickDirectors.addEventListener("change",function(e){
     //iniciar 
 })
 
+
 clickMovies.addEventListener("change",function(e){
     if (e.target.value === "RT"){
         let sortBy = filtradoPorPelicula(ghibli.films);
