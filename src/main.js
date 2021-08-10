@@ -8,33 +8,20 @@ let clickDirectors= document.getElementById("clickDirectors");
 let clickPeople= document.getElementById("clickPeople");
 let clickVehicles= document.getElementById("clickVehicles");
 let clickLocations= document.getElementById("clickLocations");
+const card = document.getElementById("card");
 
 
 iniciar(ghibli)
 
 
-clickDirectors.addEventListener("change",function(e){
-    
-    console.log(filtradoPorDirector(ghibli,e.target.value))
-    generadorcitoDeeHtmlcito();
-    //borrar todo 
-    //iniciar 
-})
 
-clickMovies.addEventListener("change",function(e){
-    if (e.target.value === "RT"){
-        let sortBy = filtradoPorPelicula(ghibli.films);
-        films.innerHTML = sortBy;
-    }
-    console.log(filtradoPorPelicula(ghibli,e.target.value))
-})
 
 function iniciar(data){
     let html=""
     data.films.forEach((film) => {
     html+=generadorcitoDeeHtmlcito(film)      
-  });
-  movies.innerHTML =html;
+    });
+    movies.innerHTML =html;
 }
 // function directors(data){
 //     let html2=""
@@ -45,7 +32,7 @@ function iniciar(data){
 // }
 
 function generadorcitoDeeHtmlcito(film){
-   return `<div class="card">
+    return `<div class="card" id="card">
         <div class="column">
 
         <h2>${film.title}</h2> 
@@ -55,8 +42,6 @@ function generadorcitoDeeHtmlcito(film){
         <p>· Personajes: ${film.people.map(personaje => {return `${personaje.name}`
         }
         )}</p> -->
-        </div>
-        <div class="datos"> 
         <p>Director: ${film.director}</p>    
         <p>Productor: ${film.producer}</p> 
         <p>Año de estreno: ${film.release_date}</p>
@@ -65,34 +50,18 @@ function generadorcitoDeeHtmlcito(film){
         </div>` 
 }
 
-
-
-
-//Prueba para popularidad
-
-const popularity = ghibli.films.filter((pop) => {
-    if (pop.rt_score >= 95) {
-
-        return pop;
-    }
-
-});
-
-const allFilms = ghibli.films.map((film)=>{
-    return film;
-});
- 
-//MOSTRANDO TODOS LOS PERSONAJES
-const people = ghibli.films.map((film)=>{
-    return film.people;
+clickDirectors.addEventListener("change",function(e){
+    
+    console.log(filtradoPorDirector(ghibli,e.target.value))
+    console.log(movies.childElementCount);
+    //borrar todo 
+    //iniciar 
 })
 
+
 //Checar la condicional porque sigue retornando arrays aunque estén vacíos.
+/*
 const vehicles = ghibli.films.map((film)=>{
     if(film.vehicles !== Array(0))
     return film.vehicles
-});
-const locations = ghibli.films.map((film)=>{
-    if(film.locations !== undefined)
-    return film.locations;
-});
+}); */

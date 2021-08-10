@@ -75,11 +75,8 @@ display: none;
     display: flex;
     display: inline-block;
     border-radius: 25px;
-    /* max-width: 450px; */
     width: 20rem;
-    /* min-width: 25rem;*/
     height: 44rem;
-    /* max-height: 45rem;*/
     padding: 1rem;
     margin: 2rem;
     background-color: #21aba5;
