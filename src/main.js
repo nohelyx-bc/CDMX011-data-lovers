@@ -1,6 +1,6 @@
 
 import ghibli from './data/ghibli/ghibli.js';
-import {filtradoPorDirector, filtradoPorPelicula} from './data.js'
+import {filtradoPorDirector, filtradoPorGenero, filtradoPorPelicula} from './data.js'
 
 let movies = document.getElementById("movies")
 let clickMovies= document.getElementById("clickMovies");
@@ -14,6 +14,21 @@ const card = document.getElementById("card");
 iniciar(ghibli)
 
 
+clickDirectors.addEventListener("change",function(e){
+    
+    console.log(filtradoPorDirector(ghibli, e.target.value))
+    console.log(card.childElementCount);
+    //borrar todo 
+    //iniciar 
+})
+
+clickMovies.addEventListener("change", function(e){
+    console.log(filtradoPorPelicula(ghibli, e.target.value))
+})
+
+clickPeople.addEventListener("change", function(e){
+    console.log(filtradoPorGenero(ghibli, e.target.value))
+})
 
 
 function iniciar(data){
@@ -23,13 +38,7 @@ function iniciar(data){
     });
     movies.innerHTML =html;
 }
-// function directors(data){
-//     let html2=""
-//     data.films.forEach((filtradoPorDirector) => {
-//     html2+=generadorcitoDeeHtmlcito(filtradoPorDirector)      
-//   });
-//   movies.innerHTML =html2
-// }
+
 
 function generadorcitoDeeHtmlcito(film){
     return `<div class="card" id="card">
@@ -50,18 +59,21 @@ function generadorcitoDeeHtmlcito(film){
         </div>` 
 }
 
-clickDirectors.addEventListener("change",function(e){
-    
-    console.log(filtradoPorDirector(ghibli,e.target.value))
-    console.log(movies.childElementCount);
-    //borrar todo 
-    //iniciar 
-})
+function getFilms(film){
+    //se crea el contenedor para la tarjeta
+    const divCard = document.createElement("div");
+    divCard.classList.add("card");
+
+    //Se crea el contenedor para los elementos dentro de la tarjeta
+    const divColumn = document.createElement("div");
+    divColumn.classList.add("column");
+
+    //crear imagen
+    const imgPoster = document.createElement("img");
+    imgPoster.src = film.poster; 
+    imgPoster.classList.add("poster");
+    divColumn.appendChild(imgPoster);
+
+}
 
 
-//Checar la condicional porque sigue retornando arrays aunque estén vacíos.
-/*
-const vehicles = ghibli.films.map((film)=>{
-    if(film.vehicles !== Array(0))
-    return film.vehicles
-}); */
