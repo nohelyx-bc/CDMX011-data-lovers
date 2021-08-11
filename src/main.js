@@ -10,9 +10,7 @@ let clickMovies= document.getElementById("clickMovies");
 let clickDirectors= document.getElementById("clickDirectors");
 let clickPeople= document.getElementById("clickPeople");
 
-
-
-const dataHtml = ghibli.films
+//const dataHtml = ghibli.films
 
 iniciar(ghibli)
 showPeople(ghibli)
@@ -24,26 +22,6 @@ showVehicle(ghibli)
 // Paso 3: pasar funcion a través de elemento que muestre algo en el DOM
 
 clickDirectors.addEventListener("change",function(e){
-    // let clickDirectors= document.getElementById("clickDirectors").value; 
-    //  const filtradoDirectorHtml = filtradoPorDirector(dataHtml,clickDirectors)
-    //  let mostrarFiltro = ""
-    //  filtradoDirectorHtml.forEach((filtrado =>{
-    //      mostrarFiltro+=`<div class="card" id="card">
-    //      <div class="column">
-
-    //      <h2>${filtrado.title}</h2> 
-    //      <img src="${filtrado.poster}" class="poster">  
-    //      <p class="description">${filtrado.description}</p>
-    //      <p>Director: ${filtrado.director}</p>    
-    //      <p>Productor: ${filtrado.producer}</p> 
-    //      <p>Año de estreno: ${filtrado.release_date}</p>
-    //      <p>Rotten Tomatoes: ${filtrado.rt_score}</p>
-    //      </div>
-    //      </div>` 
-
-     }))
-
-     document.getElementById("movies").innerHTML= mostrarFiltro
 
     console.log(filtradoPorDirector(ghibli, e.target.value))
 
@@ -55,9 +33,9 @@ clickMovies.addEventListener("change", function(e){
     console.log(filtradoPorPelicula(ghibli, e.target.value))
 })
 
- clickPeople.addEventListener("change", function(e){
-     console.log(filtradoPorPersonaje(ghibli, e.target.value))
-     console.log(showPeople);
+clickPeople.addEventListener("change", function(e){
+    console.log(filtradoPorPersonaje(ghibli, e.target.value))
+    console.log(showPeople);
  })
 
 
@@ -94,8 +72,8 @@ export function showPeople(data){
     film.people.forEach((person)=>{
         html2+=getPeople(person)   
     })
-   );
-  people.innerHTML =html2;
+    );
+    people.innerHTML =html2;
 }
 
 function getPeople(person){
@@ -118,8 +96,8 @@ export function showLocation(data){
     film.locations.forEach((place)=>{
         html2+=getLocation(place)   
     })
-   );
-  place.innerHTML =html2;
+    );
+    place.innerHTML =html2;
 }
 
 function getLocation(place){
@@ -141,8 +119,8 @@ export function showVehicle(data){
     film.vehicles.forEach((vehicle)=>{
         html2+=getVehicle(vehicle)   
     })
-   );
-  vehicle.innerHTML =html2;
+    );
+    vehicle.innerHTML =html2;
 }
 
 function getVehicle(vehicle){
