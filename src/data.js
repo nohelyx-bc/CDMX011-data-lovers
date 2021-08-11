@@ -7,11 +7,31 @@ export function filtradoPorDirector(data,director) {
     
 }
 
-export function filtradoPorPelicula(data){
-    return data.films.sort((film1, film2)=>{
-            return film2.rt_score - film1.rt_score;
-    })
+export function filtradoPorPelicula(data, option){
+    if (option == "ABC"){
+        const sortByABC = data.films.sort((a, b) => {
+            return a.title < b.title ? 1 : 1;
+        })
+        return sortByABC;
+    }
+        
+
+    else if (option == "RT"){
+        const sortByRT = data.films.sort((a, b)=>{
+            return b.rt_score - a.rt_score;
+        })
+        return sortByRT;
+    }
+    
+    else if (option == "year"){
+        const sortByYear = data.films.sort((a, b) => {
+            return b.release_date - a.release_date;
+        })
+        return sortByYear;
+    }
+
 }
+
 
 
 // const popularity = ghibli.films.filter((pop) => {
@@ -21,3 +41,10 @@ export function filtradoPorPelicula(data){
 //     }
 
 // });
+
+//Checar la condicional porque sigue retornando arrays aunque estén vacíos.
+/*
+const vehicles = ghibli.films.map((film)=>{
+    if(film.vehicles !== Array(0))
+    return film.vehicles
+}); */
