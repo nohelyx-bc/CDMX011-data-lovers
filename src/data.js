@@ -34,10 +34,12 @@ export function filtradoPorPelicula(data, option){
 
 export function filtradoPorGenero(data, option){
     if (option == "fem") {
-        const sortByFem = data.films.people.filter((genero) => {
-            if (genero.gender === "Female"){
-                return genero;
-            }
+        const sortByFem = data.films.filter((people)=>{
+            people.gender.filter((fem) => {
+                if(gender == "Female")
+                return fem.gender;
+            })
+        
         })
         return sortByFem;
     }
