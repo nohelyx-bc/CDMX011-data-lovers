@@ -3,6 +3,7 @@ import ghibli from './data/ghibli/ghibli.js';
 import {filtradoPorDirector, filtradoPorGenero, filtradoPorPelicula} from './data.js'
 
 let movies = document.getElementById("movies")
+let people =document.getElementById("people");
 let clickMovies= document.getElementById("clickMovies");
 let clickDirectors= document.getElementById("clickDirectors");
 let clickPeople= document.getElementById("clickPeople");
@@ -12,6 +13,7 @@ const card = document.getElementById("card");
 
 
 iniciar(ghibli)
+showPeople(ghibli)
 
 // Paso 1: borrar/ocultar el contenido en el div "movies"
 // Paso 2: llamar contenido filtrado por director
@@ -41,11 +43,6 @@ function iniciar(data){
     movies.innerHTML =html;
 }
 
-function deleteDisplay(data){
-
-}
-
-
 function getFilms(film){
     return `<div class="card" id="card">
         <div class="column">
@@ -64,6 +61,31 @@ function getFilms(film){
         </div>
         </div>` 
 } 
+
+function showPeople(data){
+    let html2=""
+    data.films.forEach((film) => 
+    film.people.forEach((person)=>{
+        html2+=getPeople(person)   
+    })
+   );
+  people.innerHTML =html2;
+}
+
+function getPeople(person){
+    return `<div class="cardPeople" id="card">
+    <div class="column">
+
+    <h2>" ${person.name}"</h2> 
+    <img src="${person.img}" class="poster">  
+    <p class="description">Género: ${person.gender}</p>
+    <p>Edad: ${person.age}</p>    
+    <p>Colo de ojos: ${person.eye_color}</p> 
+    <p>Color de cabello: ${person.hair_color}</p>
+    <p>Especie: ${person.specie}</p>
+    </div>
+    </div>` 
+}
 
 
 /*
