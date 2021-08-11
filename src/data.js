@@ -1,3 +1,5 @@
+import {showPeople, showVehicle, showLocation} from './main.js'
+
 export function filtradoPorDirector(data,director) {
     return data.films.filter((dir) => {
         if (dir.director === director) {
@@ -32,16 +34,10 @@ export function filtradoPorPelicula(data, option){
 
 }
 
-export function filtradoPorGenero(data, option){
-    if (option == "fem") {
-        const sortByFem = data.films.filter((people)=>{
-            people.gender.filter((fem) => {
-                if(gender == "Female")
-                return fem.gender;
-            })
-        
-        })
-        return sortByFem;
+
+export function filtradoPorPersonaje(option){
+    if (option == "all") {
+        return showPeople();
     }
 }
 

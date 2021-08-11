@@ -62,7 +62,7 @@ p {
     background-image: url('assets/fondo.png');
     background-repeat: repeat;
 }
-#people {
+.people {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -80,9 +80,9 @@ p {
     height: 35rem;
     padding: 1rem;
     margin: 1rem;
-    background-color: #21aba5;
+    background-color: #11535C;
     text-align: center;
-    border: solid 2px #196161;
+    border: solid 2px #6CD4E1;
 }
 
 

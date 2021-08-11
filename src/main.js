@@ -1,26 +1,50 @@
 
 import ghibli from './data/ghibli/ghibli.js';
-import {filtradoPorDirector, filtradoPorGenero, filtradoPorPelicula} from './data.js'
+import {filtradoPorDirector, filtradoPorPersonaje, filtradoPorPelicula} from './data.js'
 
 let movies = document.getElementById("movies")
 let people =document.getElementById("people");
+let place = document.getElementById("place")
+let vehicle =document.getElementById("vehicle");
 let clickMovies= document.getElementById("clickMovies");
 let clickDirectors= document.getElementById("clickDirectors");
 let clickPeople= document.getElementById("clickPeople");
-let clickVehicles= document.getElementById("clickVehicles");
-let clickLocations= document.getElementById("clickLocations");
-const card = document.getElementById("card");
 
+
+
+const dataHtml = ghibli.films
 
 iniciar(ghibli)
 showPeople(ghibli)
+showLocation(ghibli)
+showVehicle(ghibli)
 
 // Paso 1: borrar/ocultar el contenido en el div "movies"
 // Paso 2: llamar contenido filtrado por director
 // Paso 3: pasar funcion a través de elemento que muestre algo en el DOM
 
 clickDirectors.addEventListener("change",function(e){
-    
+    // let clickDirectors= document.getElementById("clickDirectors").value; 
+    //  const filtradoDirectorHtml = filtradoPorDirector(dataHtml,clickDirectors)
+    //  let mostrarFiltro = ""
+    //  filtradoDirectorHtml.forEach((filtrado =>{
+    //      mostrarFiltro+=`<div class="card" id="card">
+    //      <div class="column">
+
+    //      <h2>${filtrado.title}</h2> 
+    //      <img src="${filtrado.poster}" class="poster">  
+    //      <p class="description">${filtrado.description}</p>
+    //      <p>Director: ${filtrado.director}</p>    
+    //      <p>Productor: ${filtrado.producer}</p> 
+    //      <p>Año de estreno: ${filtrado.release_date}</p>
+    //      <p>Rotten Tomatoes: ${filtrado.rt_score}</p>
+    //      </div>
+    //      </div>` 
+
+     }))
+
+     document.getElementById("movies").innerHTML= mostrarFiltro
+
     console.log(filtradoPorDirector(ghibli, e.target.value))
 
     //borrar todo 
@@ -31,9 +55,11 @@ clickMovies.addEventListener("change", function(e){
     console.log(filtradoPorPelicula(ghibli, e.target.value))
 })
 
-clickPeople.addEventListener("change", function(e){
-    console.log(filtradoPorGenero(ghibli, e.target.value))
-})
+ clickPeople.addEventListener("change", function(e){
+     console.log(filtradoPorPersonaje(ghibli, e.target.value))
+     console.log(showPeople);
+ })
+
 
 function iniciar(data){
     let html=""
@@ -62,7 +88,7 @@ function getFilms(film){
         </div>` 
 } 
 
-function showPeople(data){
+export function showPeople(data){
     let html2=""
     data.films.forEach((film) => 
     film.people.forEach((person)=>{
@@ -73,7 +99,7 @@ function showPeople(data){
 }
 
 function getPeople(person){
-    return `<div class="cardPeople" id="card">
+    return `<div class="cardPeople">
     <div class="column">
 
     <h2>" ${person.name}"</h2> 
@@ -83,6 +109,51 @@ function getPeople(person){
     <p>Colo de ojos: ${person.eye_color}</p> 
     <p>Color de cabello: ${person.hair_color}</p>
     <p>Especie: ${person.specie}</p>
+    </div>
+    </div>` 
+}
+export function showLocation(data){
+    let html2=""
+    data.films.forEach((film) => 
+    film.locations.forEach((place)=>{
+        html2+=getLocation(place)   
+    })
+   );
+  place.innerHTML =html2;
+}
+
+function getLocation(place){
+    return `<div class="cardPeople" id="card">
+    <div class="column">
+
+    <h2>" ${place.name}"</h2> 
+    <img src="${place.img}" class="poster">  
+    <p class="description">Clima: ${place.climate}</p>
+    <p>Terreno: ${place.terrain}</p>    
+    <p>Superficie: ${place.surface_water}</p> 
+    <p>Habitantes: ${place.residents}</p>
+    </div>
+    </div>` 
+}
+export function showVehicle(data){
+    let html2=""
+    data.films.forEach((film) => 
+    film.vehicles.forEach((vehicle)=>{
+        html2+=getVehicle(vehicle)   
+    })
+   );
+  vehicle.innerHTML =html2;
+}
+
+function getVehicle(vehicle){
+    return `<div class="cardPeople" id="card">
+    <div class="column">
+
+    <h2>" ${vehicle.name}"</h2> 
+    <img src="${vehicle.img}" class="poster">  
+    <p class="description">Descripción: ${vehicle.description}</p>
+    <p>Tipo: ${vehicle.vehicle_class}</p>    
+    <p>Tamaño: ${vehicle.length}</p> 
     </div>
     </div>` 
 }
