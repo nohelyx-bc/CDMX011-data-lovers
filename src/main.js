@@ -1,6 +1,6 @@
 
 import ghibli from './data/ghibli/ghibli.js';
-import {filtradoPorDirector, filtradoPorGenero, filtradoPorPelicula} from './data.js'
+import {filtradoPorDirector, filtradoPorPelicula} from './data.js'
 
 let movies = document.getElementById("movies")
 let clickMovies= document.getElementById("clickMovies");
@@ -17,7 +17,6 @@ iniciar(ghibli)
 clickDirectors.addEventListener("change",function(e){
     
     console.log(filtradoPorDirector(ghibli, e.target.value))
-    console.log(card.childElementCount);
     //borrar todo 
     //iniciar 
 })
@@ -26,21 +25,17 @@ clickMovies.addEventListener("change", function(e){
     console.log(filtradoPorPelicula(ghibli, e.target.value))
 })
 
-clickPeople.addEventListener("change", function(e){
-    console.log(filtradoPorGenero(ghibli, e.target.value))
-})
-
 
 function iniciar(data){
     let html=""
     data.films.forEach((film) => {
-    html+=generadorcitoDeeHtmlcito(film)      
+    html+=getFilms(film)      
     });
     movies.innerHTML =html;
 }
 
 
-function generadorcitoDeeHtmlcito(film){
+function getFilms(film){
     return `<div class="card" id="card">
         <div class="column">
 
@@ -57,8 +52,10 @@ function generadorcitoDeeHtmlcito(film){
         <p>Rotten Tomatoes: ${film.rt_score}</p>
         </div>
         </div>` 
-}
+} 
 
+
+/*
 function getFilms(film){
     //se crea el contenedor para la tarjeta
     const divCard = document.createElement("div");
@@ -67,6 +64,7 @@ function getFilms(film){
     //Se crea el contenedor para los elementos dentro de la tarjeta
     const divColumn = document.createElement("div");
     divColumn.classList.add("column");
+    divCard.appendChild(divColumn);
 
     //crear imagen
     const imgPoster = document.createElement("img");
@@ -74,6 +72,30 @@ function getFilms(film){
     imgPoster.classList.add("poster");
     divColumn.appendChild(imgPoster);
 
-}
+    //crear director
+    const pDirector = document.createElement("p");
+    pDirector.innerHTML = film.director;
+    divColumn.appendChild(pDirector);
+
+     //crear productor
+    const pProductor = document.createElement("p");
+    pProductor.innerHTML = film.productor;
+    divColumn.appendChild(pProductor); 
+
+     //crear año de estreno
+    const pYear = document.createElement("p");
+    pYear.innerHTML = film.release_date;
+    divColumn.appendChild(pYear);
+
+    //crear calificación de RT
+    const pRtomatoes = document.createElement("p");
+    pRtomatoes.innerHTML = film.rt_score;
+    divColumn.appendChild(pRtomatoes);
+
+    console.log(divCard.childElementCount);
+    console.log(divColumn.childElementCount);
+    
+    return divCard;
+}*/
 
 
