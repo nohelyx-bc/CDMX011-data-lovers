@@ -1,6 +1,6 @@
 
 import ghibli from './data/ghibli/ghibli.js';
-import {filtradoPorDirector, filtradoPorPelicula} from './data.js'
+import {filtradoPorDirector, filtradoPorGenero, filtradoPorPelicula} from './data.js'
 
 let movies = document.getElementById("movies")
 let clickMovies= document.getElementById("clickMovies");
@@ -13,10 +13,14 @@ const card = document.getElementById("card");
 
 iniciar(ghibli)
 
+// Paso 1: borrar/ocultar el contenido en el div "movies"
+// Paso 2: llamar contenido filtrado por director
+// Paso 3: pasar funcion a través de elemento que muestre algo en el DOM
 
 clickDirectors.addEventListener("change",function(e){
     
     console.log(filtradoPorDirector(ghibli, e.target.value))
+
     //borrar todo 
     //iniciar 
 })
@@ -25,6 +29,9 @@ clickMovies.addEventListener("change", function(e){
     console.log(filtradoPorPelicula(ghibli, e.target.value))
 })
 
+clickPeople.addEventListener("change", function(e){
+    console.log(filtradoPorGenero(ghibli, e.target.value))
+})
 
 function iniciar(data){
     let html=""
@@ -32,6 +39,10 @@ function iniciar(data){
     html+=getFilms(film)      
     });
     movies.innerHTML =html;
+}
+
+function deleteDisplay(data){
+
 }
 
 
@@ -96,6 +107,6 @@ function getFilms(film){
     console.log(divColumn.childElementCount);
     
     return divCard;
-}*/
-
+}
+*/
 

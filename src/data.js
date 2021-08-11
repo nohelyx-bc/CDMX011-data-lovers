@@ -10,7 +10,7 @@ export function filtradoPorDirector(data,director) {
 export function filtradoPorPelicula(data, option){
     if (option == "ABC"){
         const sortByABC = data.films.sort((a, b) => {
-            return a.title < b.title ? 1 : 1;
+            return a.title.localeCompare(b.title);
         })
         return sortByABC;
     }
@@ -31,6 +31,18 @@ export function filtradoPorPelicula(data, option){
     }
 
 }
+
+export function filtradoPorGenero(data, option){
+    if (option == "fem") {
+        const sortByFem = data.films.people.filter((genero) => {
+            if (genero.gender === "Female"){
+                return genero;
+            }
+        })
+        return sortByFem;
+    }
+}
+
 
 
 
