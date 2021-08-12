@@ -12,13 +12,37 @@ let clickPeople= document.getElementById("clickPeople");
 
 
 
+
 iniciar(data)
 //showPeople(ghibli)
 //showLocation(ghibli)
 //showVehicle(ghibli)
+clickMovies.addEventListener("change",function(e) {
+    const sort = filtradoPorPelicula(data, e.target.value);
+
+    const htmlSort = sort.map((film) =>
+    `<div class="card" id="card">
+        <div class="column">
+
+        <h2>${film.title}</h2> 
+        <img src="${film.poster}" class="poster">  
+        <p class="description">${film.description}</p>
+        <!-- 
+        <p>· Personajes: ${film.people.map(personaje => {return `${personaje.name}`
+        }
+        )}</p> -->
+        <p>Director: ${film.director}</p>    
+        <p>Productor: ${film.producer}</p> 
+        <p>Año de estreno: ${film.release_date}</p>
+        <p>Rotten Tomatoes: ${film.rt_score}</p>
+        </div>
+        </div>`
+    );
+    
+    movies.innerHTML = htmlSort;
 
 
-
+})
 
 //-------Filtrado por director-------
 clickDirectors.addEventListener("change",function(e){
