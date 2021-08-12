@@ -1,13 +1,22 @@
-import {showPeople, showVehicle, showLocation} from './main.js'
+//import {showPeople, showVehicle, showLocation} from './main.js'
 
 export function filtradoPorDirector(data,director) {
-    return data.films.filter((dir) => {
+    let filtrado = data.films.filter(function(dir){
         if (dir.director === director) {
             return dir;
         }
     })
-    
+    return filtrado; 
 }
+
+/* 
+export function filterType(pokemones,typePokemon){
+  let resultado=pokemones.filter(function(pokemones){
+    return pokemones.type == typePokemon;
+  })
+  console.log(resultado);
+     return resultado
+}*/
 
 export function filtradoPorPelicula(data, option){
     if (option == "ABC"){
@@ -35,22 +44,12 @@ export function filtradoPorPelicula(data, option){
 }
 
 
-export function filtradoPorPersonaje(option){
+/* export function filtradoPorPersonaje(option){
     if (option == "all") {
         return showPeople();
     }
-}
+} */
 
-
-
-
-// const popularity = ghibli.films.filter((pop) => {
-//     if (pop.rt_score >= 95) {
-
-//         return pop;
-//     }
-
-// });
 
 //Checar la condicional porque sigue retornando arrays aunque estén vacíos.
 /*
