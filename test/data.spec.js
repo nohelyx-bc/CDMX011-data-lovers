@@ -1,23 +1,21 @@
-import { example, anotherExample } from '../src/data.js';
+import data from '../src/data/ghibli/ghibli.js'
+import {filtradoPorDirector} from '../src/data.js'
 
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
-
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
-
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
+describe("Conjunto de test de filtrado",function(){
+  it("Esto es una funcion",function(){
+    expect(typeof filtradoPorDirector).toBe('function')
+  })
+  it("El filtro sirve sin un director que no existe",function(){
+    expect(filtradoPorDirector(data, "" != data.films.map(dir =>{ 
+      dir.director
+    }))).toEqual([])
+    console.log("No es un director de Studios Ghibli!")
+  })
+  it("El filtro sirve con un director que existe",function(){
+    expect(filtradoPorDirector(data, "Hayao Miyazaki").length).toBe(9)
+  })
+  it("El filtro sirve con un director que existe",function(){
+    expect(filtradoPorDirector(data, "Isao Takahata").length).toBe(5)
+  })
+})
