@@ -52,14 +52,8 @@ clickDirectors.addEventListener("change",function(e){
     const htmlDirector = moviesFilter.map((film) =>
     `<div class="card" id="card">
         <div class="column">
-
         <h2>${film.title}</h2> 
-        <img src="${film.poster}" class="poster">  
-        <p class="description">${film.description}</p>
-        <!-- 
-        <p>· Personajes: ${film.people.map(personaje => {return `${personaje.name}`
-        }
-        )}</p> -->
+        <img src="${film.poster}">  
         <p>Director: ${film.director}</p>    
         <p>Productor: ${film.producer}</p> 
         <p>Año de estreno: ${film.release_date}</p>
@@ -90,14 +84,8 @@ function iniciar(data){
 function getFilms(film){
     return `<div class="card" id="card">
         <div class="column">
-
         <h2>${film.title}</h2> 
-        <img src="${film.poster}" class="poster">  
-        <p class="description">${film.description}</p>
-        <!-- 
-        <p>· Personajes: ${film.people.map(personaje => {return `${personaje.name}`
-        }
-        )}</p> -->
+        <img src="${film.poster}">  
         <p>Director: ${film.director}</p>    
         <p>Productor: ${film.producer}</p> 
         <p>Año de estreno: ${film.release_date}</p>
