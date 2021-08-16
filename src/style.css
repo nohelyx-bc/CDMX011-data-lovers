@@ -133,6 +133,15 @@ p {
     font-size: 1.5em;
     width: 100%;
 }
+*/
+
+.menu {
+    background: #163a5f;
+    width: 100%;
+    /*margin-left: -100%;*/
+    transition: all 0.5s;
+    text-align: center;
+}
 
 .menu,
 .submenu {
@@ -141,17 +150,14 @@ p {
     margin: 0;
 }
 
-option{
-    font-family: 'Quicksand', sans-serif;
-    font-size: 18px;
-}
-
-.menu {
-    background: #163a5f;
-    width: 100%;
-    margin-left: -100%;
-    transition: all 0.5s;
-    text-align: center;
+.menu__link {
+    display: block;
+    padding: 20px;
+    color: ivory;
+    font-size: 1em;
+    text-decoration: none;
+    width: 9em;
+    border-radius: 2rem;
 }
 
 .submenu {
@@ -160,7 +166,12 @@ option{
     transition: all 0.3s;
 }
 
-.submenu {
+option{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+}
+
+.submenu .menu__link {
     background: rgb(129, 167, 236);
     padding: 15px;
     font-size: 14px;
@@ -176,12 +187,6 @@ option{
 .menu__link:hover {
     background-color: #478585;
 }
-
-.mostrar {
-    margin-left: 0;
-}
-
-
 
 @media(min-width:1024px) {
     .nav-bar {
@@ -208,37 +213,4 @@ option{
         opacity: 1;
         visibility: visible;
     }
-}*/
-
-.menu__link {
-    display: block;
-    padding: 20px;
-    color: ivory;
-    font-size: 1em;
-    text-decoration: none;
-    width: 9em;
-    border-radius: 2rem;
-}
-
-.submenu {
-    height: 0;
-    overflow: hidden;
-    transition: all 0.3s;
-}
-
-.submenu .menu__link {
-    background: rgb(129, 167, 236);
-    padding: 15px;
-    font-size: 14px;
-    width: auto;
-    text-align: center;
-}
-
-.submenu .menu__link:hover {
-    background-color: #3b8686;
-    color: #cff09e;
-}
-
-.menu__link:hover {
-    background-color: #478585;
 }
