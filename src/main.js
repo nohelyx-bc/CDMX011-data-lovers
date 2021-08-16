@@ -17,6 +17,9 @@ iniciar(data)
 //showPeople(ghibli)
 //showLocation(ghibli)
 //showVehicle(ghibli)
+
+
+//------Funcion de reordenamiento de películas------
 clickMovies.addEventListener("change",function(e) {
     const sort = filtradoPorPelicula(data, e.target.value);
 
@@ -67,12 +70,8 @@ clickDirectors.addEventListener("change",function(e){
 
 })
 
-clickMovies.addEventListener("change", function(e){
-    console.log(filtradoPorPelicula(ghibli, e.target.value))
-})
 
-
-
+//------despliega el HTML en la pantalla inicial------
 function iniciar(data){
     let html=""
     data.films.forEach((film) => {
@@ -81,6 +80,7 @@ function iniciar(data){
     movies.innerHTML =html;
 }
 
+//-----generador de HTML------
 function getFilms(film){
     return `<div class="card" id="card">
         <div class="column">

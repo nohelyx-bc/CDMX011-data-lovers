@@ -1,5 +1,3 @@
-//import {showPeople, showVehicle, showLocation} from './main.js'
-
 export function filtradoPorDirector(data,director) {
     let filtrado = data.films.filter(function(dir){
         if (dir.director === director) {
@@ -8,15 +6,6 @@ export function filtradoPorDirector(data,director) {
     })
     return filtrado; 
 }
-
-/* 
-export function filterType(pokemones,typePokemon){
-  let resultado=pokemones.filter(function(pokemones){
-    return pokemones.type == typePokemon;
-  })
-  console.log(resultado);
-     return resultado
-}*/
 
 export function filtradoPorPelicula(data, option){
     if (option == "ABC"){
@@ -42,18 +31,3 @@ export function filtradoPorPelicula(data, option){
     }
 
 }
-
-
-/* export function filtradoPorPersonaje(option){
-    if (option == "all") {
-        return showPeople();
-    }
-} */
-
-
-//Checar la condicional porque sigue retornando arrays aunque estén vacíos.
-/*
-const vehicles = ghibli.films.map((film)=>{
-    if(film.vehicles !== Array(0))
-    return film.vehicles
-}); */
