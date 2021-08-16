@@ -10,7 +10,6 @@ describe("Conjunto de test de filtrado",function(){
     expect(filtradoPorDirector(data, "" != data.films.map(dir =>{ 
       dir.director
     }))).toEqual([])
-    console.log("No es un director de Studios Ghibli!")
   })
   it("El filtro sirve con un director que existe",function(){
     expect(filtradoPorDirector(data, "Hayao Miyazaki").length).toBe(9)

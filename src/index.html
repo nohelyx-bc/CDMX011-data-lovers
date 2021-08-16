@@ -18,30 +18,20 @@
     <header>
         <h1><img src="assets/logo.png" class="logo"/>
         </h1>
-        <span class="nav-bar" id="btnMenu"><i class="fas fa-bars"></i>Menú</span>
+       <!-- <span class="nav-bar" id="btnMenu"><i class="fas fa-bars"></i>Menú</span>-->
         <nav>
             <ul class="menu" id="menu">
-                <!--   <li class="menu__item container-submenu">
-                    <a href="#" class="menu__link submenu-btn">Películas <i class="fas fa-sort-down"></i></a>
-                    <ul class="submenu">
-                        <li class="menu__item"><a href="#" class="menu__link">Año de Lanzamiento</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Rotten Tomatoes</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Año de Lanzamiento</a></li>
-                    </ul>
-                </li> -->
 
-                <select class ="menu__item container-submenu" id="clickMovies"> 
-                    
+                <select class ="menu__item" id="clickMovies"> 
                     <div class="submenu"> 
-                        <option >Sort Movies By:</option>
+                        <option >Ordenar películas por:</option>
                         <option value="year">Año de Lanzamiento</option>
                         <option value="RT">Rotten Tomatoes</option>
                         <option value="ABC">Alfabéticamente</option>
                     </div>
                 </select>
 
-                <select class ="menu__item container-submenu" id="clickDirectors"> 
-                    
+                <select class ="menu__item" id="clickDirectors"> 
                     <div class="submenu"> 
                         <option >Directores</option>
                         <option >Hayao Miyazaki</option>
@@ -53,30 +43,20 @@
                     </div>
                 </select>
 
-                <select class ="menu__item container-submenu" id="clickPeople"> 
+                <select class ="menu__item" id="clickProducers"> 
                     <div class="submenu"> 
-                        <option >Personajes</option>
-                        <option value="all">Todos</option>
-                        <option value="masc">Masculino</option>
-                        <option value="fem">Femenino</option>
-                        <option >Otros</option>
+                        <option >Productores</option>
+                        <option >Hayao Miyazaki</option>
+                        <option >Isao Takahata</option>
+                        <option >Toru Hara</option>
+                        <option >Toshio Suzuki</option>
+                        <option >Yoshiaki Nishimura</option>
                     </div>
                 </select>
 
-                <select class ="menu__item container-submenu" id="clickVehicles"> 
-                    <div class="submenu"> 
-                        <option >Vehículos</option>
-                    </div>
-                </select>
-
-                <select class ="menu__item container-submenu" id="clickLocations"> 
-                    <div class="submenu"> 
-                        <option >Locaciones</option>
-                    </div>
-                </select>
-
+                <li class="menu__item"><a href="#" class="menu__link">Personajes</a></li> 
                 <li class="menu__item"><a href="#" class="menu__link">Vehículos</a></li> 
-                <li class="menu__item"><a href="#" class="menu__link" id="sort">Sort Z-A</a></li> 
+                <li class="menu__item"><a href="#" class="menu__link">Locaciones</a></li> 
             </ul>
         </nav>
     </header>
@@ -85,7 +65,7 @@
         <div id="movies"></div>
     </section>
     <section>
-        <div class ="people" id="people"></div>
+        <div class ="people"></div>
     </section>
     <section>
         <div class ="people" id="place"></div>
@@ -95,7 +75,9 @@
     </section>
 
 
-    <footer></footer>
+    <footer>
+        Realizado por Nohely Badillo & Alba López, 2021
+    </footer>
 
     <script src="main.js" type="module"></script>
 </body>

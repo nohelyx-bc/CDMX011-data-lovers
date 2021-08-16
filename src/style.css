@@ -29,13 +29,6 @@ h1 {
     max-height: 12rem;
 }
 
-
-/*h2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}*/
-
 p {
     font-family: 'Questrial', sans-serif;
     padding: 2px;
@@ -71,21 +64,6 @@ p {
     background-repeat: repeat;
 }
 
-.cardPeople {
-    position: relative;
-    display: flex;
-    display: inline-block;
-    border-radius: 25px;
-    width: 20rem;
-    height: 35rem;
-    padding: 1rem;
-    margin: 1rem;
-    background-color: #11535C;
-    text-align: center;
-    border: solid 2px #6CD4E1;
-}
-
-
 .card {
     position: relative;
     display: flex;
@@ -100,6 +78,20 @@ p {
     border: solid 2px #196161;
 }
 
+.cardPeople {
+    position: relative;
+    display: flex;
+    display: inline-block;
+    border-radius: 25px;
+    width: 20rem;
+    height: 35rem;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #11535C;
+    text-align: center;
+    border: solid 2px #6CD4E1;
+}
+
 @media(max-width:1024px) {
     .logo{
         max-height: 8rem;
@@ -108,12 +100,7 @@ p {
         width: 30rem;
         height: 45rem;
     }
-}
 
-@media(max-width:1024px) {
-    .logo{
-        max-height: 8rem;
-    }
     .cardPeople {
         width: 30rem;
         height: 45rem;
@@ -131,18 +118,13 @@ p {
     width: 225px;
 }
 
-
-/* .column ul {
-    text-align: center;
-    list-style: none;
-} */
-
 .column h2 {
     text-align: center;
     color: white;
 }
 
-.nav-bar {
+
+/*.nav-bar {
     background: orange;
     padding: 20px;
     display: block;
@@ -151,20 +133,21 @@ p {
     font-size: 1.5em;
     width: 100%;
 }
+*/
+
+.menu {
+    background: #163a5f;
+    width: 100%;
+    /*margin-left: -100%;*/
+    transition: all 0.5s;
+    text-align: center;
+}
 
 .menu,
 .submenu {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-.menu {
-    background: #163a5f;
-    width: 100%;
-    margin-left: -100%;
-    transition: all 0.5s;
-    text-align: center;
 }
 
 .menu__link {
@@ -183,6 +166,11 @@ p {
     transition: all 0.3s;
 }
 
+option{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+}
+
 .submenu .menu__link {
     background: rgb(129, 167, 236);
     padding: 15px;
@@ -198,10 +186,6 @@ p {
 
 .menu__link:hover {
     background-color: #478585;
-}
-
-.mostrar {
-    margin-left: 0;
 }
 
 @media(min-width:1024px) {
