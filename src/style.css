@@ -160,16 +160,22 @@ p {
     border-radius: 2rem;
 }
 
+.menu__item {
+    color: aliceblue;
+    background-color: #163a5f;
+    border: 0;
+}
+.menu__item:hover{
+    background-color: #6CD4E1;
+}
+
 .submenu {
     height: 0;
     overflow: hidden;
     transition: all 0.3s;
 }
 
-option{
-    font-family: 'Quicksand', sans-serif;
-    font-size: 18px;
-}
+
 
 .submenu .menu__link {
     background: rgb(129, 167, 236);
