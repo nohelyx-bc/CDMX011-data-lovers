@@ -148,7 +148,7 @@ function getPeople(person){
     return `<div class="cardPeople">
     <div class="column">
 
-    <h2>" ${person.name}"</h2> 
+    <h2>" ${person.name} "</h2> 
     <img src="${person.img}" class="poster">  
     <p class="description">Género: ${person.gender}</p>
     <p>Edad: ${person.age}</p>    
@@ -183,7 +183,7 @@ function getLocation(place){
     return `<div class="cardPeople" id="card">
     <div class="column">
 
-    <h2>" ${place.name}"</h2> 
+    <h2>" ${place.name} "</h2> 
     <img src="${place.img}" class="poster">  
     <p class="description">Clima: ${place.climate}</p>
     <p>Terreno: ${place.terrain}</p>    
@@ -191,7 +191,7 @@ function getLocation(place){
     <p>Habitantes: ${place.residents.map(res =>{
         if (place.residents != "TODO"){
         return res.name
-    }else return "No hay información"
+    }else return "No se tiene información"
     })}</p>
     </div>
     </div>` 
@@ -220,7 +220,7 @@ function getVehicle(vehicle){
     return `<div class="cardPeople" id="card">
     <div class="column">
 
-    <h2>" ${vehicle.name}"</h2> 
+    <h2>" ${vehicle.name} "</h2> 
     <img src="${vehicle.img}" class="poster">  
     <p class="description">Descripción: ${vehicle.description}</p>
     <p>Tipo: ${vehicle.vehicle_class}</p>    
