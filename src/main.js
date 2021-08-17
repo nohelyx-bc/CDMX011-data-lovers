@@ -10,7 +10,7 @@ let clickMovies= document.getElementById("clickMovies");
 let clickDirectors= document.getElementById("clickDirectors");
 let clickProducers= document.getElementById("clickProducers");
 let clickFilms = document.getElementById("clickFilms");
-
+let logoMain =document.getElementById("logoMain");
 
 start(data)
 showPeople(data)
@@ -120,6 +120,7 @@ function displayFilms(){
     document.getElementById("movies").style.display="flex";
   
 } clickFilms.addEventListener("click", displayFilms);
+logoMain.addEventListener("click", displayFilms);
 //------funciones para mostrar personajes------
 function showPeople(data){
    
