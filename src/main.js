@@ -9,14 +9,14 @@ let vehicle =document.getElementById("vehicle");
 let clickMovies= document.getElementById("clickMovies");
 let clickDirectors= document.getElementById("clickDirectors");
 let clickProducers= document.getElementById("clickProducers");
-
-
+let clickFilms = document.getElementById("clickFilms");
 
 
 start(data)
 showPeople(data)
 showLocation(data)
 showVehicle(data)
+
 
 
 //------Funcion de reordenamiento de películas------
@@ -97,6 +97,10 @@ function start(data){
     movies.innerHTML =html;
 }
 
+    document.getElementById("people").style.display="none";
+    document.getElementById("place").style.display="none";
+    document.getElementById("vehicle").style.display="none";
+
 //-----generador de HTML------
 function getFilms(film){
     return `<div class="card" id="card">
@@ -110,20 +114,35 @@ function getFilms(film){
         </div>
         </div>` 
 } 
-
+//-----Función y evento para ocultar y mostrar las cards-----
+function displayFilms(){
+    document.querySelector(".people").style.display="none";
+    document.getElementById("movies").style.display="flex";
+  
+} clickFilms.addEventListener("click", displayFilms);
 //------funciones para mostrar personajes------
 function showPeople(data){
+   
     let html2=""
     data.films.forEach((film) => 
     film.people.forEach((person)=>{
-        html2+=getPeople(person)   
+        html2+=getPeople(person, film)   
     })
     );
     people.innerHTML =html2;
+    
 }
+function displayPeople(){
+    document.getElementById("people").style.display="flex";
+    document.getElementById("movies").style.display="none";
+    document.getElementById("place").style.display="none";
+    document.getElementById("vehicle").style.display="none";
+}
+document.getElementById("clickPeople").addEventListener("click", displayPeople);
 
 
 function getPeople(person){
+    document.getElementById("people").style.display="block";
     return `<div class="cardPeople">
     <div class="column">
 
@@ -138,6 +157,8 @@ function getPeople(person){
     </div>` 
 }
 
+
+
 //------funciones para mostrar locaciones------
 function showLocation(data){
     let html2=""
@@ -148,6 +169,13 @@ function showLocation(data){
     );
     place.innerHTML =html2;
 }
+function displayLocations(){
+    document.getElementById("people").style.display="none";
+    document.getElementById("movies").style.display="none";
+    document.getElementById("place").style.display="flex";
+    document.getElementById("vehicle").style.display="none";
+}
+document.getElementById("clickLocations").addEventListener("click", displayLocations);
 
 function getLocation(place){
     return `<div class="cardPeople" id="card">
@@ -158,7 +186,11 @@ function getLocation(place){
     <p class="description">Clima: ${place.climate}</p>
     <p>Terreno: ${place.terrain}</p>    
     <p>Superficie: ${place.surface_water}</p> 
-    <p>Habitantes: ${place.residents}</p>
+    <p>Habitantes: ${place.residents.map(res =>{
+        if (place.residents != "TODO"){
+        return res.name
+    }else return "No hay información"
+    })}</p>
     </div>
     </div>` 
 }
@@ -174,6 +206,13 @@ function showVehicle(data){
     );
     vehicle.innerHTML =html2;
 }
+function displayVehicle(){
+    document.getElementById("people").style.display="none";
+    document.getElementById("movies").style.display="none";
+    document.getElementById("place").style.display="none";
+    document.getElementById("vehicle").style.display="flex"
+}
+document.getElementById("clickVehicles").addEventListener("click", displayVehicle);
 
 function getVehicle(vehicle){
     return `<div class="cardPeople" id="card">
