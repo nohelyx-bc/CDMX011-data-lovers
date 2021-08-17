@@ -20,7 +20,7 @@ export function sortByMovies(data, option){
     if (option == "ABC"){
         const sortByABC = data.films.sort((a, b) => {
             return a.title.localeCompare(b.title);
-        })
+        }) 
         return sortByABC;
     }
         

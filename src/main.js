@@ -121,6 +121,7 @@ function displayFilms(){
   
 } clickFilms.addEventListener("click", displayFilms);
 logoMain.addEventListener("click", displayFilms);
+
 //------funciones para mostrar personajes------
 function showPeople(data){
    
