@@ -110,7 +110,7 @@ function getFilms(film){
         <p>Director: ${film.director}</p>    
         <p>Productor: ${film.producer}</p> 
         <p>Año de estreno: ${film.release_date}</p>
-        <p>Rotten Tomatoes: ${film.rt_score}</p>
+        <p class="tomato"><img src="assets/tomato.svg">Rotten Tomatoes:  ${film.rt_score}</p>
         </div>
         </div>` 
 } 
@@ -121,6 +121,7 @@ function displayFilms(){
   
 } clickFilms.addEventListener("click", displayFilms);
 logoMain.addEventListener("click", displayFilms);
+
 //------funciones para mostrar personajes------
 function showPeople(data){
    

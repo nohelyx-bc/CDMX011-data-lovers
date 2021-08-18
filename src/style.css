@@ -5,7 +5,7 @@
 body {
     margin: 0;
     background-color: #1d566e;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Questrial', sans-serif;
     font-size: 20px;
     font-weight: 300;
 }
@@ -76,6 +76,16 @@ p {
     background-color: #21aba5;
     text-align: center;
     border: solid 2px #196161;
+}
+
+.tomato{
+    display: flex;
+    
+}
+
+.tomato img {
+    width: 20px;
+    height: 20px;
 }
 
 .cardPeople {
