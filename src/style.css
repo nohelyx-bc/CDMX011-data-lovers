@@ -144,7 +144,21 @@ p {
     width: 100%;
 }
 */
-
+footer{
+    background: #163a5f;
+    width: 100%;
+    font-size: 1.5rem;
+    transition: all 0.5s;
+    text-align: center;
+    color: whitesmoke;
+    padding: 1rem;
+}
+a{
+    color: whitesmoke;
+}
+a:hover{
+    color: rgb(46, 1, 46);
+}
 .menu {
     background: #163a5f;
     width: 100%;
@@ -202,6 +216,14 @@ p {
 
 .menu__link:hover {
     background-color: #478585;
+}
+.hola{
+   overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.hola:hover{
+    color: black;
 }
 
 @media(min-width:1024px) {
