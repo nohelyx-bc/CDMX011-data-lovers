@@ -61,7 +61,7 @@ p {
     display: inline-block;
     border-radius: 25px;
     width: 20rem;
-    height: 44rem;
+    height: 42rem;
     padding: 1rem;
     margin: 2rem;
     background-color: #21aba5;
@@ -156,8 +156,9 @@ nav{
     border: 0;
     font-size: 14px;
     display: flex;
-   justify-content: flex-end;
-   font-family: 'Questrial', sans-serif;
+    justify-content: flex-end;
+    font-family: 'Questrial', sans-serif;
+    
     
 }
 .menuOption:hover{
@@ -176,18 +177,16 @@ nav{
     height: auto;
     border-radius: 1.5rem;
 }
-.menu__link>p{
-    
+.menu__link  p{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 .menu__link:hover {
     background-color:#6CD4E1;
 }
-.hola{
-   overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-.hola:hover{
+
+.menu__link p:hover{
     color: black;
 }
 

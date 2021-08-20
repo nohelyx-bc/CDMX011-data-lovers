@@ -38,7 +38,6 @@ clickMovies.addEventListener("change",function(e) {
     
     movies.innerHTML = htmlSort;
 
-
 })
 
 //-------Filtrado por director-------
@@ -105,7 +104,7 @@ export function start(data){
 export function getFilms(film){
     return `<div class="card" id="card">
         <div class="column">
-        <h2>${film.title}</h2> 
+        <h2>"${film.title}"</h2> 
         <img src="${film.poster}">  
         <p>Director: ${film.director}</p>    
         <p>Productor: ${film.producer}</p> 
@@ -128,7 +127,7 @@ function showPeople(data){
     let html2=""
     data.films.forEach((film) => 
     film.people.forEach((person)=>{
-        html2+=getPeople(person, film)   
+        html2+=getPeople(person)   
     })
     );
     people.innerHTML =html2;
