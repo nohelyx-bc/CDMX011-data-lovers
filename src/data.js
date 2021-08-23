@@ -1,11 +1,8 @@
-import {start} from './main.js'
-export function directorFilter(data,director,option) {
+export function directorFilter(data,director) {
     let filtered = data.films.filter(function(dir){
         if (dir.director === director) {
             return dir;
-        }else if(option == "All")
-
-        return start;
+        }
     })
     return filtered; 
 }
