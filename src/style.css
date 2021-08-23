@@ -10,10 +10,6 @@ body {
     font-weight: 300;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-weight: 600;
-}
-
 h1 {
     margin: 0;
     padding: 5px;
@@ -36,11 +32,6 @@ p {
     color: white;
     text-align: center;
 }
-
-.description {
-    display: none;
-}
-
 
 .poster{
     width: 1rem;
@@ -70,7 +61,7 @@ p {
     display: inline-block;
     border-radius: 25px;
     width: 20rem;
-    height: 44rem;
+    height: 42rem;
     padding: 1rem;
     margin: 2rem;
     background-color: #21aba5;
@@ -78,15 +69,6 @@ p {
     border: solid 2px #196161;
 }
 
-.tomato{
-    display: flex;
-    
-}
-
-.tomato img {
-    width: 20px;
-    height: 20px;
-}
 
 .cardPeople {
     position: relative;
@@ -133,17 +115,6 @@ p {
     color: white;
 }
 
-
-/*.nav-bar {
-    background: orange;
-    padding: 20px;
-    display: block;
-    color: white;
-    cursor: pointer;
-    font-size: 1.5em;
-    width: 100%;
-}
-*/
 footer{
     background: #163a5f;
     width: 100%;
@@ -155,81 +126,72 @@ footer{
 }
 a{
     color: whitesmoke;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 a:hover{
     color: rgb(46, 1, 46);
 }
+
+nav{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
 .menu {
     background: #163a5f;
     width: 100%;
-    /*margin-left: -100%;*/
-    transition: all 0.5s;
     text-align: center;
-}
-
-.menu,
-.submenu {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
-.menu__link {
-    display: block;
-    padding: 20px;
-    color: ivory;
-    font-size: 1em;
-    text-decoration: none;
-    width: 9em;
-    border-radius: 2rem;
-}
-
-.menu__item {
+.menuOption {
     color: aliceblue;
     background-color: #163a5f;
     border: 0;
-}
-.menu__item:hover{
-    background-color: #6CD4E1;
-}
-
-.submenu {
-    height: 0;
-    overflow: hidden;
-    transition: all 0.3s;
-}
-
-
-
-.submenu .menu__link {
-    background: rgb(129, 167, 236);
-    padding: 15px;
     font-size: 14px;
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Questrial', sans-serif;
+    
+    
+}
+.menuOption:hover{
+    background-color: #6CD4E1;
+    color: black;
+}
+
+.menu__link {
+    display: flex;
+    flex-direction: column;
+    padding: 17px;
+    color: ivory;
+    font-size: 1em;
+    text-decoration: none;
     width: auto;
-    text-align: center;
+    height: auto;
+    border-radius: 1.5rem;
 }
-
-.submenu .menu__link:hover {
-    background-color: #3b8686;
-    color: #cff09e;
-}
-
-.menu__link:hover {
-    background-color: #478585;
-}
-.hola{
-   overflow: hidden;
+.menu__link  p{
+    overflow: hidden;
     margin: 0;
     padding: 0;
 }
-.hola:hover{
+.menu__link:hover {
+    background-color:#6CD4E1;
+}
+
+.menu__link p:hover{
     color: black;
 }
 
 @media(min-width:1024px) {
-    .nav-bar {
-        display: none;
-    }
+   
     .menu {
         margin-left: 0;
         display: flex;
