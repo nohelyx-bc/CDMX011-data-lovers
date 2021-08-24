@@ -2,15 +2,15 @@
 import data from './data/ghibli/ghibli.js';
 import {directorFilter, producerFilter, sortByMovies} from './data.js'
 
-const movies = document.getElementById("movies")
-const people = document.getElementById("people")
-const place = document.getElementById("place")
-const vehicle =document.getElementById("vehicle");
-const clickMovies= document.getElementById("clickMovies");
-const clickDirectors= document.getElementById("clickDirectors");
-const clickProducers= document.getElementById("clickProducers");
-const clickFilms = document.getElementById("clickFilms");
-const logoMain =document.getElementById("logoMain");
+let movies = document.getElementById("movies")
+let people =document.querySelector(".people")
+let place = document.getElementById("place")
+let vehicle =document.getElementById("vehicle");
+let clickMovies= document.getElementById("clickMovies");
+let clickDirectors= document.getElementById("clickDirectors");
+let clickProducers= document.getElementById("clickProducers");
+let clickFilms = document.getElementById("clickFilms");
+let logoMain =document.getElementById("logoMain");
 
 start(data);
 showPeople(data)
@@ -96,10 +96,9 @@ export function start(data){
     movies.innerHTML =html;
 }
 
-    people.style.display="none";
-    place.style.display="none";
-    vehicle.style.display="none";
-
+    document.getElementById("people").style.display="none";
+    document.getElementById("place").style.display="none";
+    document.getElementById("vehicle").style.display="none";
 
 //-----generador de HTML------
 export function getFilms(film){
@@ -116,19 +115,15 @@ export function getFilms(film){
 } 
 //-----Función y evento para ocultar y mostrar las cards de Películas-----
 export function displayFilms(){
-    people.style.display="none";
-    place.style.display="none";
-    vehicle.style.display="none";
-    movies.style.display="flex";
-} 
-
-clickFilms.addEventListener("click", displayFilms);
+    document.querySelector(".people").style.display="none";
+    document.getElementById("movies").style.display="flex";
+  
+} clickFilms.addEventListener("click", displayFilms);
 logoMain.addEventListener("click", displayFilms);
-
-
 
 //------funciones para mostrar personajes------
 function showPeople(data){
+   
     let html2=""
     data.films.forEach((film) => 
     film.people.forEach((person)=>{
@@ -140,7 +135,7 @@ function showPeople(data){
 }
 
 function getPeople(person){
-    people.style.display="block";
+    document.getElementById("people").style.display="block";
     return `<div class="cardPeople">
     <div class="column">
 
@@ -156,10 +151,10 @@ function getPeople(person){
 }
 //-----Función y evento para ocultar y mostrar las cards de Personajes-----
 function displayPeople(){
-    people.style.display="flex";
-    movies.style.display="none";
-    place.style.display="none";
-    vehicle.style.display="none";
+    document.getElementById("people").style.display="flex";
+    document.getElementById("movies").style.display="none";
+    document.getElementById("place").style.display="none";
+    document.getElementById("vehicle").style.display="none";
 }
 document.getElementById("clickPeople").addEventListener("click", displayPeople);
 
@@ -195,10 +190,10 @@ function getLocation(place){
 }
 //-----Función y evento para ocultar y mostrar las cards de Locaciones-----
 function displayLocations(){
-    people.style.display="none";
-    movies.style.display="none";
-    place.style.display="flex";
-    vehicle.style.display="none";
+    document.getElementById("people").style.display="none";
+    document.getElementById("movies").style.display="none";
+    document.getElementById("place").style.display="flex";
+    document.getElementById("vehicle").style.display="none";
 }
 document.getElementById("clickLocations").addEventListener("click", displayLocations);
 
@@ -227,10 +222,10 @@ function getVehicle(vehicle){
 }
 //-----Función y evento para ocultar y mostrar las cards de Vehículos-----
 function displayVehicle(){
-    people.style.display="none";
-    movies.style.display="none";
-    place.style.display="none";
-   vehicle.style.display="flex";
+    document.getElementById("people").style.display="none";
+    document.getElementById("movies").style.display="none";
+    document.getElementById("place").style.display="none";
+    document.getElementById("vehicle").style.display="flex"
 }
 document.getElementById("clickVehicles").addEventListener("click", displayVehicle);
 
