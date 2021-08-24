@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Wiki Ghibli</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/all.min.css" />
+    <link rel="stylesheet" href="assets/fontawesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Questrial&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+</head>
+
+<body>
+    <header >
+        <h1><a href="#"><img id="logoMain" src="assets/logo.png" class="logo" /></a>
+        </h1>
+        <!-- <span class="nav-bar" id="btnMenu"><i class="fas fa-bars"></i>Menú</span>-->
+        <nav>
+
+            <select class ="menuOption" id="clickMovies"> 
+                    <option >Ordenar por:</option>
+                    <option value="year">Año de Lanzamiento</option>
+                    <option value="RT">Rotten Tomatoes</option>
+                    <option value="ABC">Alfabéticamente</option>
+            </select>
+
+
+            <select class ="menuOption" id="clickDirectors"> 
+                    <option >Filtrar por directores</option>
+                    <option value="All">All</option>
+                    <option >Hayao Miyazaki</option>
+                    <option >Isao Takahata</option>
+                    <option >Hiromasa Yonebayashi</option>
+                    <option >Gorō Miyazaki</option>
+                    <option >Hiroyuki Morita</option>
+                    <option >Yoshifumi Kondō</option>
+            </select>
+
+            <select class ="menuOption" id="clickProducers"> 
+                    <option >Filtrar por productores</option>
+                    <option >Hayao Miyazaki</option>
+                    <option >Isao Takahata</option>
+                    <option >Toru Hara</option>
+                    <option >Toshio Suzuki</option>
+                    <option >Yoshiaki Nishimura</option>
+            </select>
+            
+            <ul class="menu" id="menu">
+                <li ><a href="#" class="menu__link" id="clickFilms"><i class="fas fa-film"><p class="hola">Películas</p></i></a></li> 
+                <li ><a href="#" class="menu__link" id="clickPeople"><i class="fas fa-user"></i><p class="hola">Personajes</p></a></li> 
+                <li ><a href="#" class="menu__link" id="clickVehicles"><i class="fas fa-car-side"></i><p class="hola">Vehículos</p></a></li> 
+                <li ><a href="#" class="menu__link" id="clickLocations"><i class="fas fa-map-marked-alt"></i><p class="hola">Locaciones</p></a></li> 
+            </ul>
+            
+        </nav>
+    </header>
+
+    <section>
+        <div id="movies"></div>
+    </section>
+    <section>
+        <div class ="people" id="people" style="display: none;"></div>
+    </section>
+    <section>
+        <div class ="people" id="place" style="display: none;"></div>
+    </section>
+    <section>
+        <div class ="people" id="vehicle" style="display: none;"></div>
+    </section>
+
+
+    <footer>
+        Realizado por: Nohely Badillo y Alba López <br><a target="_blank" href="https://www.laboratoria.la/">·Laboratoria·</a> 2021 ©
+    </footer>
+
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>
