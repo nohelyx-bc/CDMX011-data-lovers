@@ -1,5 +1,5 @@
 export function directorFilter(data,director) {
-    let filtered = data.films.filter(function(dir){
+    const filtered = data.films.filter(function(dir){
         if (dir.director === director) {
             return dir;
         }
@@ -8,7 +8,7 @@ export function directorFilter(data,director) {
 }
 
 export function producerFilter(data, producer) {
-    let filtered = data.films.filter(function(prod){
+    const filtered = data.films.filter(function(prod){
         if (prod.producer === producer){
             return prod
         }

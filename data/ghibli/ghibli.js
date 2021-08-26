@@ -2158,7 +2158,7 @@ const ghibli = {
                 "id": "411f66ed0-771c-46d3-8f68-a3b65c6dd91c",
                 "name": "Mitsubishi 1MF9 ",
                 "img": "https://static.wikia.nocookie.net/studio-ghibli/images/4/41/Kazetachinu044.jpg",
-                "description": "The Mitsubishi 1MF9 or Mitsubishi Experimental Taka-type Carrier Fighter was a prototype Japanese fighter aircraft of the 1920s. It was a single-engined, single-seat biplane intended to operate from the Imperial Japanese Navy's aircraft carriers, but only two were built, with the type being rejected by the Navy.",
+                "description": "Was a prototype Japanese fighter aircraft of the 1920s. It was a single-engined, single-seat biplane intended to operate from the Imperial Japanese Navy's aircraft carriers.",
                 "vehicle_class": "War plane",
                 "length": "8",
                 "pilot": {
