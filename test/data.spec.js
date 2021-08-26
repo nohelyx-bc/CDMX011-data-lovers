@@ -12,22 +12,22 @@ describe("Conjunto de test de filtrado",function(){
     }))).toEqual([])
   })
   it("El filtro sirve con el director Hayao Miyazaki",function(){
-    expect(directorFilter(data, "Hayao Miyazaki").length).toBe(9)
+    expect(directorFilter(data, "Hayao Miyazaki")).toHaveLength(9)
   })
   it("El filtro sirve con el director Isao Takahata",function(){
-    expect(directorFilter(data, "Isao Takahata").length).toBe(5)
+    expect(directorFilter(data, "Isao Takahata")).toHaveLength(5)
   })
   it("El filtro sirve con el director Hiromasa Yonebayashi", function(){
-    expect(directorFilter(data, "Hiromasa Yonebayashi").length).toBe(2)
+    expect(directorFilter(data, "Hiromasa Yonebayashi")).toHaveLength(2)
   })
   it("El filtro sirve con el director Gorō Miyazaki", function(){
-    expect(directorFilter(data, "Gorō Miyazaki").length).toBe(2)
+    expect(directorFilter(data, "Gorō Miyazaki")).toHaveLength(2)
   })
   it("El filtro sirve con el director Hiroyuki Morita", function(){
-    expect(directorFilter(data, "Hiroyuki Morita").length).toBe(1)
+    expect(directorFilter(data, "Hiroyuki Morita")).toHaveLength(1)
   })
   it("El filtro sirve con el director Yoshifumi Kondō", function(){
-    expect(directorFilter(data, "Yoshifumi Kondō").length).toBe(1)
+    expect(directorFilter(data, "Yoshifumi Kondō")).toHaveLength(1)
   })
 
   it("El filtrado por productor es una funcion",function(){
@@ -39,19 +39,19 @@ describe("Conjunto de test de filtrado",function(){
     }))).toEqual([])
   })
   it("El filtro sirve con el productor Hayao Miyazaki",function(){
-    expect(producerFilter(data, "Hayao Miyazaki").length).toBe(2)
+    expect(producerFilter(data, "Hayao Miyazaki")).toHaveLength(2)
   })
   it("El filtro sirve con el director Isao Takahata",function(){
-    expect(producerFilter(data, "Isao Takahata").length).toBe(1)
+    expect(producerFilter(data, "Isao Takahata")).toHaveLength(1)
   })
   it("El filtro sirve con el director Toru Hara", function(){
-    expect(producerFilter(data, "Toru Hara").length).toBe(1)
+    expect(producerFilter(data, "Toru Hara")).toHaveLength(1)
   })
   it("El filtro sirve con el director Toshio Suzuki", function(){
-    expect(producerFilter(data, "Toshio Suzuki").length).toBe(14)
+    expect(producerFilter(data, "Toshio Suzuki")).toHaveLength(14)
   })
   it("El filtro sirve con el director Yoshiaki Nishimura", function(){
-    expect(producerFilter(data, "Yoshiaki Nishimura").length).toBe(2)
+    expect(producerFilter(data, "Yoshiaki Nishimura")).toHaveLength(2)
   })
 })
 
