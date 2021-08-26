@@ -162,6 +162,7 @@ function displayVehicle(){
     place.style.display="none";
    vehicle.style.display="flex";
 }
+
 document.getElementById("clickVehicles").addEventListener("click", displayVehicle);
 
 //------Funcion de reordenamiento de películas------
